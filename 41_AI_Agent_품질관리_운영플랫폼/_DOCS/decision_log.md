@@ -1,6 +1,6 @@
 # 프로젝트 의사결정/변경 로그
 
-이 문서는 `ai_agent_quality_portfolio` 프로젝트를 만들면서 나눴던 대화에서 나온
+이 문서는 `ai_agent_quality_platform` 프로젝트를 만들면서 나눴던 대화에서 나온
 **결정 사항, 변경 이력, 아직 안 끝난 일**을 정리한 기록입니다. 집에서 여기까지 진행하고
 강의실에서 이어서 작업할 예정이라, 다음에 다시 볼 때 맥락을 빠르게 복구하는 용도입니다.
 
@@ -17,7 +17,7 @@
 - **judge_agent의 JSON 파싱 견고화** — 모델이 코드펜스(` ```json `)를 붙여도 파싱되도록
 
 이후 "실시간 챗봇 + Prometheus/Grafana 모니터링"으로 프로젝트를 확장하기로 하면서, 별도 폴더
-`ai_agent_quality_portfolio`를 새로 만들어 지금 이 프로젝트로 넘어왔습니다.
+`ai_agent_quality_platform`을 새로 만들어 지금 이 프로젝트로 넘어왔습니다.
 
 ## 2. 확정된 설계 결정 사항
 
@@ -54,7 +54,7 @@
 - **로그/지표는 전부 "서버를 실행 중인 컴퓨터"에 저장된다.** 여러 명이 각자 다른 컴퓨터로 접속해도,
   실제 FastAPI 프로세스가 도는 컴퓨터 하나에 모든 로그가 쌓인다. Docker로 띄워도 마찬가지 (같은
   컴퓨터 안의 컨테이너일 뿐). `docker-compose.yml`에서 `./logs:/srv/app/logs`로 호스트 폴더에
-  바인드 마운트해뒀기 때문에, Docker로 실행해도 로그 파일은 호스트(`ai_agent_quality_portfolio/logs/`)
+  바인드 마운트해뒀기 때문에, Docker로 실행해도 로그 파일은 호스트(`ai_agent_quality_platform/logs/`)
   에서 그대로 보인다.
 - **"내 IP로 공유"와 "실제 배포"는 다른 개념.** LAN IP 공유는 같은 네트워크 안에서만 되고, 컴퓨터를
   끄면 끊기는 임시 방편. 실제 배포는 클라우드 서버(AWS/GCP 등)를 별도로 빌려 그 서버의 IP/도메인을
@@ -63,7 +63,7 @@
 
 ## 4. 이번 세션에서 구현/변경한 것 (시간순)
 
-1. `ai_agent_quality_portfolio` 폴더 스켈레톤 생성 (app/, tests/, quality/, performance/, dashboard/,
+1. `ai_agent_quality_platform` 폴더 스켈레톤 생성 (app/, tests/, quality/, performance/, dashboard/,
    monitoring/, _DOCS/, Docker 관련 파일)
 2. `ai_quality_final_project`에서 `.env`, `knowledge_base.py`, `test_cases.json` 이관
 3. `app/` 전체 구현: FastAPI 앱(`main.py`), 에이전트(`service_agent.py`), 저지(`judge_agent.py`),

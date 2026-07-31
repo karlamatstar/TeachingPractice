@@ -1,4 +1,4 @@
-"""AI Agent Quality Portfolio 통합 런처 (GUI).
+"""AI Agent 품질관리 운영플랫폼 통합 런처 (GUI).
 
 서버 역할을 하는 컴퓨터(이 프로젝트가 있는 컴퓨터)에서 실행한다.
 - ▶ 전체 시작 / ⏹ 전체 종료: docker compose(챗봇 API/Prometheus/Grafana) + Streamlit 대시보드를 한 번에 기동/종료
@@ -76,13 +76,13 @@ class LauncherApp:
         self.service_running = [False] * len(SERVICES)  # 서비스별 실행 상태
         self.busy = False  # 시작/종료 작업 중 중복 클릭 방지 (전체 공용 락)
 
-        root.title("AI Agent Quality Portfolio 런처")
+        root.title("AI Agent 품질관리 운영플랫폼 런처")
         root.geometry("860x620")
         root.protocol("WM_DELETE_WINDOW", self.on_close)
 
         header = tk.Frame(root, padx=12, pady=10)
         header.pack(fill="x")
-        tk.Label(header, text="AI Agent Quality Portfolio", font=("Malgun Gothic", 14, "bold")).pack(anchor="w")
+        tk.Label(header, text="AI Agent 품질관리 운영플랫폼", font=("Malgun Gothic", 14, "bold")).pack(anchor="w")
         tk.Label(header, text=f"서버 IP (동료 공유용): {self.lan_ip}", font=("Malgun Gothic", 10), fg="#555").pack(anchor="w")
 
         controls = tk.Frame(root, padx=12)

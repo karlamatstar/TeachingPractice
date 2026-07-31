@@ -2,6 +2,14 @@
 
 VOC 분석·개선 Agent와 독립 LLM Judge, 교차검증, GUI·보고서를 통합한 프로젝트입니다.
 
+## 프로젝트별 학습 요약
+
+- 해결하려던 문제: 여러 Agent가 만든 VOC 분석과 개선안을 내부 평가만으로 판단하지 않고, 원문 근거와 독립된 기준으로 검증해야 합니다.
+- 구현한 QA 흐름: Interpreter·Retriever·Summarizer·Evaluator·Critic·Improver가 VOC를 처리하고, pytest·독립 LLM Judge·교차검증이 결과와 장애 대응을 점검합니다.
+- 사용 기술: Python, gRPC, Protocol Buffers, OpenAI API, Anthropic API, pytest
+- 확인한 결과: 테스트 설정과 루브릭, Judge CSV, 품질 점수 Markdown 및 두 종류의 DOCX 결과 문서가 역할별 폴더에 보존되어 있습니다.
+- 한계와 개선 방향: 모델 조합과 외부 API 상태가 평가 결과 및 응답 시간에 영향을 주므로, 미평가 N/A와 기능 결함을 분리하고 같은 VOC 세트로 모델 조합을 비교할 수 있습니다.
+
 ## 학습 위치
 
 - 강의 제목: VOC Improve 및 QA 프로젝트

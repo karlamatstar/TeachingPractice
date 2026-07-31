@@ -28,7 +28,7 @@ async def lifespan(app: FastAPI):
     yield
 
 
-app = FastAPI(title="AI Agent Quality Portfolio", lifespan=lifespan)
+app = FastAPI(title="AI Agent Quality Platform", lifespan=lifespan)
 app.mount("/metrics", metrics_app)
 app.mount("/reports", StaticFiles(directory=BASE_DIR / "_OUTPUT" / "quality"), name="reports")
 

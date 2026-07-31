@@ -1,5 +1,5 @@
 @echo off
-rem AI Agent Quality Portfolio launcher (double-click to open the GUI)
+rem AI Agent quality platform launcher (double-click to open the GUI)
 rem Prefers the project venv (.venv); falls back to system Python.
 cd /d "%~dp0.."
 

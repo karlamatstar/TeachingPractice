@@ -35,12 +35,12 @@
 | 없음 | `logger_config.py` | 로그 관리 추가 |
 | 없음 | `schemas.py` | 요청·응답 데이터 형식 관리 |
 
-## 최종 포트폴리오 구조
+## 최종 프로젝트 구조
 
 기존 `ai_quality_final_project`를 아래처럼 확장합니다.
 **기존 프로젝트를 그대로 복사한 것이 아니라, 기존 기능을 폴더별 책임에 맞게 재배치하고 확장한 형태**입니다.
 
-| 기존 `ai_quality_final_project` | 확장 프로젝트 위치 (`ai_agent_quality_portfolio`) | 연결 내용 |
+| 기존 `ai_quality_final_project` | 확장 프로젝트 위치 (`ai_agent_quality_platform`) | 연결 내용 |
 | :--- | :--- | :--- |
 | `main.py` | `app/main.py` | FastAPI 서버, `/health`, `/ask`, `/metrics` API 역할 |
 | `service_agent.py` | `app/service_agent.py` | 사용자 질문을 받아 규칙 기반 또는 API 기반 답변 생성 |
@@ -56,7 +56,7 @@
 ### 확장 구조도
 
 ```text
-ai_agent_quality_portfolio/
+ai_agent_quality_platform/
 │
 ├─ app/
 │  ├─ main.py
@@ -208,7 +208,7 @@ tests/       → pytest 자동화 테스트
 performance/ → k6 부하 테스트
 monitoring/  → Prometheus·Grafana 설정
 dashboard/   → Streamlit 시각화
-_DOCS/        → 포트폴리오 문서
+_DOCS/        → 프로젝트 문서
 ```
 
 특히 새로 추가되는 부분은 아래입니다.
@@ -220,7 +220,7 @@ _DOCS/        → 포트폴리오 문서
 
 따라서 이 확장 프로젝트는 완전히 새로운 프로그램이라기보다,
 
-> **기존 `ai_quality_final_project`를 기반으로 "개발 → 테스트 → 품질평가 → 성능검증 → 모니터링 → 배포"까지 포함하도록 포트폴리오 수준으로 확장한 구조**
+> **기존 `ai_quality_final_project`를 기반으로 "개발 → 테스트 → 품질평가 → 성능검증 → 모니터링 → 배포"까지 포함하도록 확장한 수업 프로젝트 구조**
 
 라고 이해하시면 됩니다.
 

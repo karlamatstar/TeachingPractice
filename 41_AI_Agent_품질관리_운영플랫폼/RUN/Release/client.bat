@@ -1,5 +1,5 @@
 @echo off
-rem AI Agent Quality Portfolio client (double-click to open)
+rem AI Agent quality platform client (double-click to open)
 rem Runs on a colleague's computer - only needs Python installed (no packages).
 cd /d "%~dp0"
 

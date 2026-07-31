@@ -232,11 +232,11 @@ JSON, CSV, Markdown 보고서를 자동 생성하는 파일입니다.
 
 ---
 
-# **[최종 목표 포트폴리오]**
+# **[최종 목표 프로젝트]**
 
 ![image.png](image1.png)
 
-ai_agent_quality_portfolio/
+ai_agent_quality_platform/
 │
 ├─ app/
 │  ├─ main.py

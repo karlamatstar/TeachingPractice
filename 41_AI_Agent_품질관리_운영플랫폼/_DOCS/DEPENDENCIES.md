@@ -3,7 +3,7 @@
 가상환경과 설치된 모듈 폴더는 포함하지 않습니다. 아래 명령으로 필요한 모듈을 다시 설치할 수 있습니다.
 
 - Python: `python -m pip install -r "requirements.txt"`
-- Python: `python -m pip install -r "src/stage_01_portfolio/requirements.txt"`
+- Python: `python -m pip install -r "src/stage_01_foundation/requirements.txt"`
 - 컨테이너: `docker compose -f "docker-compose.yml" up --build`
 
 ## 권장 순서

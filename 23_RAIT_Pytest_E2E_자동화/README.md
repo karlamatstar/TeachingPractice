@@ -2,6 +2,14 @@
 
 API Judge와 UI E2E를 pytest로 검증하고 결함 보고서 증거를 생성하는 실습입니다.
 
+## 프로젝트별 학습 요약
+
+- 해결하려던 문제: API의 상태 코드와 응답 시간만으로는 AI 답변 품질과 웹 화면 동작을 함께 확인하기 어렵습니다.
+- 구현한 QA 흐름: FastAPI `/chat` 응답을 매개변수화된 pytest와 LLM Judge로 평가하고, Playwright로 Swagger UI 접속과 화면 증거 생성을 확인합니다.
+- 사용 기술: FastAPI, pytest, httpx, OpenAI API, Playwright, Loguru
+- 확인한 결과: API Judge 로그, UI 화면 증거와 HTML 결함 보고서가 `_OUTPUT`에 구분되어 있습니다.
+- 한계와 개선 방향: 외부 Judge와 브라우저 바이너리가 필요하므로, Judge를 사용할 수 없을 때의 N/A 처리와 증거 파일 경로 규칙을 더 명확히 정할 수 있습니다.
+
 ## 학습 위치
 
 - 강의 제목: AI Agent 품질 프레임워크 테스트 자동화

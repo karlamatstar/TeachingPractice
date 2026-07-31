@@ -1,4 +1,4 @@
-"""AI Agent Quality Portfolio 접속 클라이언트 (배포용).
+"""AI Agent 품질관리 운영플랫폼 접속 클라이언트 (배포용).
 
 동료(클라이언트) 컴퓨터에서 실행한다. 서비스 시작/종료 기능은 없고,
 서버에서 이미 기동 중인 서비스에 버튼으로 접속만 한다.
@@ -64,12 +64,12 @@ class ClientApp:
         self.checking = False
         self.last_states: list[bool | None] = [None] * len(SERVICES)  # 상태 변화 때만 로그를 남기기 위한 기억
 
-        root.title("AI Agent Quality Portfolio 접속 클라이언트")
+        root.title("AI Agent 품질관리 운영플랫폼 접속 클라이언트")
         root.geometry("680x520")
 
         header = tk.Frame(root, padx=12, pady=10)
         header.pack(fill="x")
-        tk.Label(header, text="AI Agent Quality Portfolio — 접속 클라이언트",
+        tk.Label(header, text="AI Agent 품질관리 운영플랫폼 — 접속 클라이언트",
                  font=("Malgun Gothic", 14, "bold")).pack(anchor="w")
 
         # ---- 서버 IP 입력 + 서버 상태 ----

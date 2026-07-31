@@ -1,7 +1,7 @@
-# AI Agent Quality Portfolio
+# AI Agent 품질관리 운영플랫폼
 
 FastAPI 기반 AI 교육과정 안내 챗봇을 자동 테스트(pytest) + AI Judge 품질평가 + 성능테스트(k6) +
-실시간 관측성(Prometheus/Grafana)까지 갖춰 운영하는 포트폴리오 프로젝트입니다.
+실시간 관측성(Prometheus/Grafana)까지 연결해 운영 흐름을 학습하는 수업 프로젝트입니다.
 
 ## 파이프라인
 
