@@ -47,7 +47,7 @@
 ## 실행 방법
 
 ```powershell
-# 0. 가상환경 활성화 (프로젝트 루트 d:\voc 에서)
+# 0. 가상환경 활성화 (프로젝트 루트 <프로젝트 경로> 에서)
 .\.venv\Scripts\Activate.ps1
 
 # 1. LLM Judge 단위 테스트 (API 키·서버 불필요)

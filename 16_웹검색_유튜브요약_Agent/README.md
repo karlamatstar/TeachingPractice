@@ -24,11 +24,14 @@ DuckDuckGo·Tavily 웹 검색과 YouTube 요약을 Agent 화면에 연결하는 
 
 세부 실행법이 원래 문서에 있었던 프로젝트는 `_DOCS/기존_상세안내.md`에 보존했습니다. 교재형 실습은 프로젝트 루트에서 `Set-Location src` 후 각 챕터의 코드를 실행하면 상대 경로를 유지할 수 있습니다.
 
+## 실행 환경 안내
+
+- Python 가상환경(`.venv`)과 Jupyter Notebook 환경을 구성하고 `requirements.txt`의 검색·영상 처리 모듈을 설치해야 합니다.
+- 웹 검색·YouTube 자료 조회와 외부 모델 호출에는 인터넷 연결 및 예제에서 사용하는 서비스 인증정보가 필요할 수 있습니다.
+
 ## 의존성 설치
 
 - Python: `python -m pip install -r "requirements.txt"`
-
-API를 사용하는 실습은 프로젝트 최상위 `.env`에 필요한 키를 설정합니다. `.env`는 `.gitignore`에 포함되어 있습니다.
 
 ## 산출물
 

@@ -9,11 +9,15 @@ import os
 import re
 import time
 from datetime import datetime
+from pathlib import Path
 from gpt_functions import get_current_time, tools
 from openai import OpenAI
 from dotenv import load_dotenv
 
-load_dotenv()
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+OUTPUT_DIR = PROJECT_ROOT / "_OUTPUT"
+
+load_dotenv(PROJECT_ROOT / ".env")
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # ─── 50 Test Cases ────────────────────────────────────────────────────────────
@@ -393,9 +397,10 @@ def write_report(records: list[dict]):
                 lines.append(f"- **{m}** (평균 {avg_m:.2f}): 위기 상황 감지 및 공감 표현 부족 → 안전 관련 시스템 프롬프트 보강 권고")
 
     report = "\n".join(lines)
-    with open("test_report.md", "w", encoding="utf-8") as f:
-        f.write(report)
-    print("\n[OK] 테스트 결과서 저장: test_report.md")
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    report_path = OUTPUT_DIR / "test_report.md"
+    report_path.write_text(report, encoding="utf-8")
+    print(f"\n[OK] 테스트 결과서 저장: {report_path}")
     return report
 
 if __name__ == "__main__":

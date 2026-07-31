@@ -1,7 +1,7 @@
 # Word 보고서 2종 생성 기록
 
 - 작업일: 2026-07-15
-- 생성 위치: `D:\voc\_OUTPUT\quality_diagnosis`
+- 생성 위치: `<프로젝트 경로>\_OUTPUT\quality_diagnosis`
 - 참조 자료: LLM Judge JSON·CSV·Markdown, pytest JSON·LOG, 테스트 케이스 JSON, 현재 코드 구조
 
 ## 생성 문서
@@ -76,5 +76,5 @@ Judge 의견에서 8개 사례가 표본 수 또는 대표성 한계를 언급�
 동일한 로그를 기준으로 다시 생성할 때는 다음 스크립트를 사용한다.
 
 ```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File D:\voc\quality_diagnosis\generate_word_reports.ps1
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File <프로젝트 경로>\quality_diagnosis\generate_word_reports.ps1
 ```

@@ -1,9 +1,9 @@
 {
   "mcpServers": {
     "vocMcp": {
-      "command": "D:\\voc\\.venv\\Scripts\\python.exe",
+      "command": "python",
       "args": [
-        "D:\\voc\\main.py"
+        "main.py"
       ]
     }
   }

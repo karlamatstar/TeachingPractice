@@ -8,7 +8,7 @@
 #   - 오른쪽: 6개 에이전트 서버 로그 패널 (개별/전체 시작·종료)
 #
 # 실행:
-#   d:\voc\.venv\Scripts\python.exe RUN\run_gui.py
+#   python RUN\run_gui.py
 #   (또는 RUN\VOC_QA_Launcher.bat 더블클릭)
 #
 # 별도 패키지 불필요 (파이썬 내장 tkinter 사용)
@@ -26,7 +26,7 @@ from datetime import datetime
 from pathlib import Path
 
 # ============ 경로 설정 ============
-ROOT = Path(__file__).resolve().parent.parent          # d:\voc
+ROOT = Path(__file__).resolve().parent.parent
 VENV_PY = ROOT / ".venv" / "Scripts" / "python.exe"
 PY = str(VENV_PY if VENV_PY.exists() else sys.executable)
 REPORTS = ROOT / "_OUTPUT" / "quality_diagnosis"
@@ -182,7 +182,7 @@ class App(tk.Tk):
         if ENV_FILE_VARS:
             self._runner_log(f"🔑 .env 로드됨: {', '.join(ENV_FILE_VARS.keys())}\n", "ok")
         else:
-            self._runner_log("🔑 .env 파일이 없거나 비어 있습니다 (d:\\voc\\.env)\n", "warn")
+            self._runner_log(f"🔑 .env 파일이 없거나 비어 있습니다 ({ROOT / '.env'})\n", "warn")
         for key, users in [("OPENAI_API_KEY", "Interpreter/Retriever/Summarizer/Evaluator/Critic"),
                            ("ANTHROPIC_API_KEY", "Improver, LLM Judge")]:
             if not (key in ENV_FILE_VARS or os.environ.get(key)):

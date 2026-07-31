@@ -1,0 +1,7 @@
+beautifulsoup4
+feedparser
+openai
+python-dotenv
+requests
+streamlit
+tzdata

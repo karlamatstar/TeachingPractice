@@ -2,7 +2,7 @@
 
 ## 1. 목적과 공통 구조
 
-이 문서는 `D:\voc`의 VOC 분석 MCP 서버를 다음 외부 채팅 도구에서 사용하는 방법을
+이 문서는 `<프로젝트 경로>`의 VOC 분석 MCP 서버를 다음 외부 채팅 도구에서 사용하는 방법을
 정리한다.
 
 - Visual Studio Code 채팅
@@ -13,7 +13,7 @@
 
 ```text
 외부 채팅 도구
-  → D:\voc\.venv\Scripts\python.exe D:\voc\main.py
+  → 프로젝트 Python 환경에서 main.py 실행
   → MCP 도구
   → gRPC 에이전트 6개
   → VOC 요약과 정책 개선안 반환
@@ -27,10 +27,10 @@
 ### 필수 파일
 
 ```text
-D:\voc\.venv\Scripts\python.exe
-D:\voc\main.py
-D:\voc\.env
-D:\voc\voc.csv
+<프로젝트 경로>\.venv\Scripts\python.exe
+<프로젝트 경로>\main.py
+<프로젝트 경로>\.env
+<프로젝트 경로>\voc.csv
 ```
 
 ### 사용 순서
@@ -46,26 +46,26 @@ MCP 클라이언트는 `main.py`만 자동 실행한다. Interpreter부터 Impro
 
 ### API 키
 
-OpenAI와 Anthropic API 키는 `D:\voc\.env`에서 프로젝트가 직접 읽는다. MCP 설정 JSON에
+OpenAI와 Anthropic API 키는 `<프로젝트 경로>\.env`에서 프로젝트가 직접 읽는다. MCP 설정 JSON에
 API 키를 복사하지 않는다.
 
 ## 3. Visual Studio Code 등록
 
-VS Code는 프로젝트의 `.vscode\mcp.json`을 사용한다. 현재 프로젝트에는 이미 다음 설정이
-들어 있다.
+VS Code는 프로젝트의 `.vscode\mcp.json`을 사용한다. 이 파일은 사용자별 절대경로가
+들어갈 수 있어 저장소에서는 제외하며, 복제한 위치에 맞춰 로컬에서 다음 형태로 만든다.
 
-파일: `D:\voc\.vscode\mcp.json`
+파일: `<프로젝트 경로>\.vscode\mcp.json`
 
 ```json
 {
   "servers": {
     "vocMcp": {
       "type": "stdio",
-      "command": "d:\\voc\\.venv\\Scripts\\python.exe",
+      "command": "python",
       "args": [
-        "d:\\voc\\main.py"
+        "main.py"
       ],
-      "cwd": "d:\\voc"
+      "cwd": "<프로젝트 경로>"
     }
   }
 }
@@ -73,7 +73,7 @@ VS Code는 프로젝트의 `.vscode\mcp.json`을 사용한다. 현재 프로젝�
 
 ### 연결 방법
 
-1. VS Code에서 `D:\voc` 폴더를 연다.
+1. VS Code에서 `<프로젝트 경로>` 폴더를 연다.
 2. `Ctrl+Shift+P`를 누른다.
 3. `MCP: List Servers`를 실행한다.
 4. `vocMcp`를 선택하고 시작한다.
@@ -90,15 +90,15 @@ VS Code 공식 문서에 따르면 프로젝트별 MCP 설정은 `.vscode/mcp.js
 
 Antigravity IDE는 프로젝트별 설정 파일 `.agents\mcp_config.json`을 사용한다.
 
-파일: `D:\voc\.agents\mcp_config.json`
+파일: `<프로젝트 경로>\.agents\mcp_config.json`
 
 ```json
 {
   "mcpServers": {
     "vocMcp": {
-      "command": "D:\\voc\\.venv\\Scripts\\python.exe",
+      "command": "python",
       "args": [
-        "D:\\voc\\main.py"
+        "main.py"
       ]
     }
   }
@@ -107,7 +107,7 @@ Antigravity IDE는 프로젝트별 설정 파일 `.agents\mcp_config.json`을 �
 
 ### 연결 방법
 
-1. Antigravity IDE에서 `D:\voc` 프로젝트를 연다.
+1. Antigravity IDE에서 `<프로젝트 경로>` 프로젝트를 연다.
 2. Agent 패널 상단의 `...` 메뉴를 누른다.
 3. `MCP Servers`를 선택한다.
 4. `Manage MCP Servers`를 선택한다.
@@ -117,6 +117,9 @@ Antigravity IDE는 프로젝트별 설정 파일 `.agents\mcp_config.json`을 �
 
 Antigravity 공식 문서에 따르면 IDE의 프로젝트별 MCP 설정 위치는
 `.agents/mcp_config.json`이며, 설정의 최상위 키는 `mcpServers`다.
+
+`python` 명령이 프로젝트 가상환경을 가리키지 않는 환경에서는 로컬 설정의 `command`를
+`<프로젝트 경로>\.venv\Scripts\python.exe`로 바꾼다.
 
 - 공식 문서: https://antigravity.google/docs/mcp
 
@@ -136,9 +139,9 @@ Windows 설정 파일:
 {
   "mcpServers": {
     "vocMcp": {
-      "command": "D:\\voc\\.venv\\Scripts\\python.exe",
+      "command": "<프로젝트 경로>\\.venv\\Scripts\\python.exe",
       "args": [
-        "D:\\voc\\main.py"
+        "<프로젝트 경로>\\main.py"
       ]
     }
   }

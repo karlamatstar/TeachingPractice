@@ -18,16 +18,21 @@
 
 ## 주요 실행 진입점
 
-- 실행 진입점보다 문서·산출물 중심의 학습 묶음입니다.
+- `src/test_runner.py`
+- `src/what_time_is_it_terminal.py`
+- `src/what_time_is_it_streamlit.py`
 
 세부 실행법이 원래 문서에 있었던 프로젝트는 `_DOCS/기존_상세안내.md`에 보존했습니다. 교재형 실습은 프로젝트 루트에서 `Set-Location src` 후 각 챕터의 코드를 실행하면 상대 경로를 유지할 수 있습니다.
 
+## 실행 환경 안내
+
+- Python 가상환경(`.venv`)을 구성하고 `requirements.txt`의 OpenAI·Streamlit·웹 조회 모듈을 설치해야 합니다.
+- Judge와 챗봇 호출에는 `OPENAI_API_KEY`가 필요합니다.
+
 ## 의존성 설치
 
-- 별도 모듈 설치가 필요 없는 정적 자료 또는 브라우저 실습입니다.
-
-API를 사용하는 실습은 프로젝트 최상위 `.env`에 필요한 키를 설정합니다. `.env`는 `.gitignore`에 포함되어 있습니다.
+- Python: `python -m pip install -r "requirements.txt"`
 
 ## 산출물
 
-새로 생성되는 로그·평가표·리포트는 `_OUTPUT`에 저장하도록 정리했습니다. 단계별 원본 코드는 `src/stage_*`에서 확인할 수 있습니다.
+테스트 실행기가 생성하는 Markdown 결과서는 `_OUTPUT/test_report.md`에 저장됩니다. 기본본과 ALT 변형을 포함한 실행 코드는 `src`에서 확인할 수 있습니다.

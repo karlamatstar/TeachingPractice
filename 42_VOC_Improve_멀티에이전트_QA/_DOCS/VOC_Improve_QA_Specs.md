@@ -73,18 +73,18 @@ netstat -ano | findstr 600
 1) VS Code에서 "Ctrl + Shift + P"를 누릅니다.
 2) 입력창에 다음을 입력합니다. `MCP: Open Workspace Folder MCP Configuration`
 3) 목록에서 해당 항목을 클릭합니다.
-4) 프로젝트 안에 다음 파일이 열리거나 만들어집니다. `C:\VOC_Improve\.vscode\mcp.json`
+4) 프로젝트 안에 다음 파일이 열리거나 만들어집니다. `<프로젝트 경로>_Improve\.vscode\mcp.json`
 5) 그 파일에 아래 내용을 넣고 저장하세요.
 ```json
 {
   "servers": {
     "vocMcp": {
       "type": "stdio",
-      "command": "C:\\VOC_Improve\\.venv\\Scripts\\python.exe",
+      "command": "<프로젝트 경로>_Improve\\.venv\\Scripts\\python.exe",
       "args": [
-        "C:\\VOC_Improve\\main.py"
+        "<프로젝트 경로>_Improve\\main.py"
       ],
-      "cwd": "C:\\VOC_Improve"
+      "cwd": "<프로젝트 경로>_Improve"
     }
   }
 }

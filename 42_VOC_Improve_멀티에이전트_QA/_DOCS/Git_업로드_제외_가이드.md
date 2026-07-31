@@ -1,8 +1,8 @@
 # Git 업로드 제외 가이드
 
 - 작성일: 2026-07-15
-- 대상 프로젝트: `D:\voc`
-- 적용 파일: `D:\voc\.gitignore`
+- 대상 프로젝트: `<프로젝트 경로>`
+- 적용 파일: `<프로젝트 경로>\.gitignore`
 
 ## 1. 반드시 제외할 항목
 
@@ -48,7 +48,7 @@ API 키가 한 번이라도 Git 이력에 포함됐다면 파일만 지우는 �
 | `quality_diagnosis/test_cases.json` | 20개 테스트 케이스 |
 | `voc.csv`, `voc.proto`, `voc_pb2*.py` | 실습 VOC 데이터와 통신 정의 |
 | `.env.example` | API 키 없이 설정 형식 안내 |
-| `.agents/mcp_config.json`, `.vscode/mcp.json` | Antigravity·VS Code MCP 연결 예시 |
+| `.agents/mcp_config.json` | 프로젝트 기준 상대 명령을 사용하는 MCP 연결 예시 |
 | `_DOCS/` | 코드 설명·작업 기록·발표 근거 |
 | `_OUTPUT/quality_diagnosis/*.docx` | 최종 한글 Word 보고서 |
 | `_OUTPUT/quality_diagnosis/*.csv`, `*.md` | Judge 점수와 품질 보고서 |
@@ -56,17 +56,16 @@ API 키가 한 번이라도 Git 이력에 포함됐다면 파일만 지우는 �
 
 ## 3. MCP 설정 파일 주의사항
 
-현재 `.agents/mcp_config.json`과 `.vscode/mcp.json`에는 API 키가 없고 `D:\voc` 실행 경로만 있으므로 수업 실습용으로 포함해도 된다. 다른 PC에서는 클론한 위치에 맞게 Python과 `main.py` 경로를 바꿔야 한다.
+추적되는 `.agents/mcp_config.json`에는 API 키가 없으며 `python`과 `main.py`를 사용하는 이동 가능한 예시만 들어 있다. `.vscode/mcp.json`처럼 사용자 환경에 따라 달라지는 IDE 설정은 Git에서 제외하고 로컬에서 준비한다.
 
 MCP JSON에 API 키를 직접 넣지 않고 프로젝트 루트의 Git 제외된 `.env`에서만 관리한다.
 
 ## 4. 최초 Git 등록 전 확인
 
-현재 `D:\voc\.git` 폴더는 비어 있어 정상 Git 저장소로 초기화되지 않은 상태다. 업로드 전에 다음 순서로 확인한다.
+저장소를 복제하거나 다른 위치로 옮긴 뒤에는 다음 순서로 제외 규칙을 확인한다.
 
 ```powershell
-cd D:\voc
-git init
+Set-Location "<프로젝트 경로>"
 git status --short
 git check-ignore -v .env
 git check-ignore -v .env.example
@@ -77,7 +76,7 @@ git check-ignore -v .env.example
 - `.env` → `.gitignore`에 의해 제외
 - `.env.example` → 제외되지 않음
 - `.venv`, `build`, 캐시·임시 파일 → 제외
-- 코드, `_docs`, 최종 보고서·실행 증적 → Git 후보로 표시
+- 코드, `_DOCS`, 최종 보고서·실행 증적 → Git 후보로 표시
 
 ## 5. 이미 Git에 추적된 파일이라면
 

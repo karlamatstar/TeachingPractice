@@ -8,8 +8,6 @@
 
 - 개요
     
-    [VOC_Improve.zip](VOC_Improve.zip)
-    
     이 시스템은 고객의 불만이나 의견(VOC)을 모아 분석하는 프로그램입니다.
     
     고객이 어떤 점을 불편해하는지 찾아보고, 이를 바탕으로 서비스나 업무를 어떻게 개선하면 좋은지 제안합니다. 
@@ -18,9 +16,7 @@
     
     이 시스템은 여러 개의 AI 에이전트가 역할을 나누어 일하는 구조입니다. 예를 들어 질문을 이해하는 에이전트, 자료를 찾는 에이전트, 내용을 요약하는 에이전트, 결과를 평가하고 개선하는 에이전트가 함께 작동합니다. 각 에이전트는 gRPC 방식으로 서로 연결되어 정보를 주고받습니다.
     
-    [에이전트 파이프라인]
-    
-    ![image.png](image.png)
+    **에이전트 파이프라인:** 사용자 질문 → Interpreter → Retriever → Summarizer → Evaluator·Critic → Improver → 정책 개선안
     
 - 고객 불만 내용
     
@@ -224,17 +220,17 @@
     1) VS Code에서 "Ctrl + Shift + P"를 누릅니다.
     2) 입력창에 다음을 입력합니다. MCP: Open Workspace Folder MCP Configuration
     3) 목록에서 해당 항목을 클릭합니다.
-    4) 프로젝트 안에 다음 파일이 열리거나 만들어집니다.  C:\VOC_Improve\.vscode\mcp.json
+    4) 프로젝트 안에 다음 파일이 열리거나 만들어집니다.  <프로젝트 경로>_Improve\.vscode\mcp.json
     5) 그 파일에 아래 내용을 넣고 저장하세요.
     {
       "servers": {
         "vocMcp": {
           "type": "stdio",
-          "command": "C:\\VOC_Improve\\.venv\\Scripts\\python.exe",
+          "command": "<프로젝트 경로>_Improve\\.venv\\Scripts\\python.exe",
           "args": [
-            "C:\\VOC_Improve\\main.py"
+            "<프로젝트 경로>_Improve\\main.py"
           ],
-          "cwd": "C:\\VOC_Improve"
+          "cwd": "<프로젝트 경로>_Improve"
         }
       }
     }
@@ -558,7 +554,7 @@
     
     ```
     
-    ![image.png](image%201.png)
+    보존된 테스트 로그와 품질 결과는 `../_OUTPUT/quality_diagnosis`에서 확인할 수 있습니다.
     
 - QA2 실습:  독립적인 LLM Judge:
 현재 만든 `pytest quality_diagnosis -v`의 22개 테스트에는 **독립적인 LLM Judge 평가는 아직 포함되지 않았습니다.**  다만 파이프라인 내부에는 이미  Evaluator Agent, Critic Agent 역할이 있습니다.
@@ -716,7 +712,7 @@
     Get-Content _OUTPUT\quality_diagnosis\llm_judge_result.csv
     Get-Content _OUTPUT\quality_diagnosis\deployment_decision.md
     
-    ![image.png](image%202.png)
+    최종 품질 결과는 [quality_score_report.md](../_OUTPUT/quality_diagnosis/quality_score_report.md)에서 확인할 수 있습니다.
     
     [보완 해야할 사항]
     

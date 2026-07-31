@@ -16,7 +16,7 @@ api_key = os.getenv("OPENAI_API_KEY")
 if not api_key:
     raise ValueError(
         "OPENAI_API_KEY를 찾지 못했습니다. "
-        "C:\\rag_chatbot\\.env 파일을 확인하십시오."
+        "프로젝트 최상위 .env 파일을 확인하십시오."
     )
 
 client = OpenAI(

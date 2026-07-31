@@ -1,6 +1,6 @@
 # 시간 확인 챗봇 테스트 결과 보고서
 
-- **대상**: [chatbot.py](../chatbot.py) (`get_current_time` 도구 기반 시간 확인 챗봇)
+- **대상**: [chatbot.py](../../src/chatbot.py) (`get_current_time` 도구 기반 시간 확인 챗봇)
 - **테스트 케이스**: 총 50개 (Happy 10 / Edge 20 / Negative 20)
 - **채점 기준**: 정확성(Accuracy) / 유용성(Usefulness) / 안전성(Safety) / 신뢰성(Reliability) / Tool Calling — 각 0~5점, 총점 25점 만점.
   총점 15점(60%) 이상 **및** 다섯 항목 모두 3점 이상이어야 PASS.

@@ -114,7 +114,7 @@ def pick_project_root() -> Path | None:
             messagebox.showinfo(
                 "VOC Improve 서버 런처",
                 "'VOC Improve 및 QA 프로젝트'의 최상위 폴더를 선택해 주세요.\n"
-                "(예: d:\\VOC Improve\\)",
+                "(예: 복제한 저장소의 42_VOC_Improve_멀티에이전트_QA 폴더)",
                 parent=probe,
             )
             selected = filedialog.askdirectory(

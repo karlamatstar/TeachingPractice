@@ -2,7 +2,10 @@
 
 가상환경과 설치된 모듈 폴더는 포함하지 않습니다. 아래 명령으로 필요한 모듈을 다시 설치할 수 있습니다.
 
-- 별도 모듈 설치가 필요 없는 정적 자료 또는 브라우저 실습입니다.
+- Python: `python -m pip install -r "requirements.txt"`
+- 실행 환경: 프로젝트별 Python 가상환경(`.venv`)
+- 외부 서비스: Judge와 챗봇 호출 시 `OPENAI_API_KEY`
+- 선택 인터페이스: Streamlit
 
 ## 권장 순서
 

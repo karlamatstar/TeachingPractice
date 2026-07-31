@@ -6,8 +6,8 @@ LLM Judge와 pytest 실행이 끝난 뒤 생성되는 로그·CSV·Markdown·JSO
 두 개의 한글 DOCX 보고서를 생성한다.
 
 ```text
-D:\voc\_OUTPUT\quality_diagnosis\VOC_개선_QA_점검완료보고서.docx
-D:\voc\_OUTPUT\quality_diagnosis\VOC_분석_종합품질평가보고서.docx
+<프로젝트 경로>\_OUTPUT\quality_diagnosis\VOC_개선_QA_점검완료보고서.docx
+<프로젝트 경로>\_OUTPUT\quality_diagnosis\VOC_분석_종합품질평가보고서.docx
 ```
 
 예시 DOCX는 포함해야 할 내용의 종류만 참고한다. 문서의 레이아웃, 표, 그래프, 색상,

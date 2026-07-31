@@ -109,4 +109,4 @@ AI 답변: "어떤 작업을 말씀하시는지 더 구체적으로 알려주실
 - 출력은 반드시 JSON 형식으로만 제공하십시오.
 
 
-파일 생성 완료: [rait-pilot-system/judge_rubric_and_examples.md](rait-pilot-system/judge_rubric_and_examples.md)
+이 문서는 Judge 평가 기준과 예시를 정리한 자료입니다.

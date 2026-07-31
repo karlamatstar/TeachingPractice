@@ -7,7 +7,7 @@
 `VOC_QA_Launcher.bat` 더블클릭 — 또는:
 
 ```powershell
-d:\voc\.venv\Scripts\python.exe d:\voc\RUN\run_gui.py
+<프로젝트 경로>\.venv\Scripts\python.exe <프로젝트 경로>\RUN\run_gui.py
 ```
 
 ## 화면 구성

@@ -23,12 +23,15 @@
 
 세부 실행법이 원래 문서에 있었던 프로젝트는 `_DOCS/기존_상세안내.md`에 보존했습니다. 교재형 실습은 프로젝트 루트에서 `Set-Location src` 후 각 챕터의 코드를 실행하면 상대 경로를 유지할 수 있습니다.
 
+## 실행 환경 안내
+
+- Python 가상환경(`.venv`)을 구성하고 루트 및 단계별 `requirements.txt`의 모듈을 설치해야 합니다.
+- LLM 기반 진단과 평가를 재실행하려면 `OPENAI_API_KEY`가 필요합니다.
+
 ## 의존성 설치
 
 - Python: `python -m pip install -r "requirements.txt"`
 - Python: `python -m pip install -r "src/stage_01_basic/requirements.txt"`
-
-API를 사용하는 실습은 프로젝트 최상위 `.env`에 필요한 키를 설정합니다. `.env`는 `.gitignore`에 포함되어 있습니다.
 
 ## 산출물
 
