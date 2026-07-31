@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+
+.env
+
+# 프로젝트 백업용 zip — 안에 .env(실제 API 키)가 그대로 들어있어서 반드시 제외
+*.zip
+
+.venv/
+
+# 빌드 산출물 (PyInstaller exe/작업 폴더) — 소스만 추적, 배포용 바이너리는 git에 안 올림
+RUN/Release/*.exe
+RUN/_build/

@@ -1,0 +1,108 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 16px 0 16px 16px;
+}
+
+.searchBarIcon {
+    width: 14px;
+    height: 14px
+}
+
+.searchBarTitle {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.searchBarTitle img {
+    width: 14px;
+    height: 14px;
+}
+
+.searchBarTitle span {
+    font-size: 13px;
+    color: #1B3A6B;
+    font-weight: 700;
+}
+
+.searchConditionWrapper {
+    margin-top: 16px;
+    display: flex;
+    gap: 16px;
+}
+
+.conditionItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.appointmentSearchLabel {
+    line-height: 15.6px;
+    font-size: 13px;
+    color: #374151;
+    background-color: #F1F5F9;
+    font-weight: 700;
+    padding: 11px 12px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border: 1px solid #D1D5DB;
+}
+
+.appointmentSearchInput {
+    width: 200px;
+    font-size: 13px;
+    line-height: 15.6px;
+    border: 1px solid #D1D5DB;
+    padding: 11px 0 11px 11px;
+}
+
+.appointmentSearchInput::placeholder {
+    color: #9CA3AF
+}
+
+.appointmentSearchSelect {
+    font-size: 13px;
+    color: #374151;
+    padding: 11px 124px 11px 12px;
+    border: 1px solid #D1D5DB;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.appointmentSearchFromDate {
+    border: 1px solid #D1D5DB;
+    font-size: 13px;
+    line-height: 15.6px;
+    color: #374151;
+    padding: 11px 10px;
+}
+
+.searchFromDate {
+    color: #374151;
+    font-size: 13px;
+    line-height: 15.6px;
+    padding: 11px 32px 11px 10px;
+    border: 1px solid #D1D5DB;
+}
+
+.searchWaveIcon {
+    background-color: #F9FAFB;
+    border-top: 1px solid #D1D5DB;
+    border-bottom: 1px solid #D1D5DB;
+    font-size: 13px;
+    line-height: 15.6px;
+    padding: 11px 10px;
+    color: #9CA3AF;
+}
+
+.searchMagnifyIcon {
+    background-color: #1B3A6B;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 12px;
+    cursor: pointer;
+}

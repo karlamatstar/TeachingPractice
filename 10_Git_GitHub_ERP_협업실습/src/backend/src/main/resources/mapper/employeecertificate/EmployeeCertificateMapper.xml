@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.logitics.erp.employeecertificate.mapper.EmployeeCertificateMapper">
+
+    <select id="getEmployeeCertificateInfo"
+        resultType="EmployeeCertificateInfoResponse"
+    >
+        SELECT * FROM employee_certificate ec
+        WHERE ec.employee_id =
+            (SELECT employee_id from employee e where e.employee_no = #{employeeNo})
+
+    </select>
+
+
+    <insert
+        id="addCertificateInfo"
+        parameterType="EmployeeCertificateAddInfoRequest"
+    >
+        INSERT INTO employee_career(
+            employee_id,
+            company_name,
+            hire_date,
+            resignation_date,
+            position_name,
+            department_name,
+            resignation_reason
+        )
+        VALUES (
+            #{employeeId},
+            #{companyName},
+            #{hireDate},
+            #{resignationDate},
+            #{positionName},
+            #{departmentName},
+            #{resignationReason}
+        )
+    </insert>
+
+
+    <update id="deleteCertificateInfo">
+        UPDATE employee_career ec
+        SET ec.deleted = true
+        WHERE ec.employee_career_id = #{deletedCareerId}
+    </update>
+
+
+
+</mapper>

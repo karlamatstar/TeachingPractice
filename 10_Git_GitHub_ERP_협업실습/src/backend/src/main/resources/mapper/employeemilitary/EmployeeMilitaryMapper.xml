@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.logitics.erp.employeemilitary.mapper.EmployeeMilitaryMapper">
+
+    <select id="getEmployeeMilitaryInfo"
+        resultType="EmployeeMilitaryInfoResponse"
+    >
+        SELECT * FROM employee_military em
+        WHERE em.employee_id =
+            (SELECT employee_id from employee e where e.employee_no = #{employeeNo})
+
+    </select>
+
+    <insert id="addMilitaryInfo"
+        parameterType="EmployeeMilitaryAddInfoRequest"
+    >
+
+        INSERT INFO employee_military(
+            discharge_type,
+            enlistment_date,
+            discharge_date,
+            military_type,
+            military_rank,
+            exemption_reason
+        )
+        VALUES (
+            #{dischargeType},
+            #{enlistmentDate},
+            #{militaryType},
+            #{militaryRank},
+            #{exemptionReason}
+        )
+
+    </insert>
+
+
+</mapper>

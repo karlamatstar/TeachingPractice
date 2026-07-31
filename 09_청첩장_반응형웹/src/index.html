@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+<meta name="theme-color" content="#fbf7f0" />
+<title>드미트리 ♥ 로렐라이 결혼합니다</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ivory:#fbf7f0;
+    --paper:#fffdf9;
+    --ink:#4a463f;
+    --soft:#8d8678;
+    --gold:#bda268;
+    --sage:#9aa583;
+    --line:#e7ded0;
+    --rose:#d98f93;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  html,body{background:#2c2a26;}
+  body{
+    font-family:'Nanum Myeongjo',serif;
+    color:var(--ink);
+    line-height:1.85;
+    -webkit-font-smoothing:antialiased;
+  }
+  /* 모바일 전제: 가운데 정렬된 휴대폰 폭 컨테이너 */
+  #app{
+    max-width:460px;
+    margin:0 auto;
+    background:var(--ivory);
+    min-height:100vh;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 0 60px rgba(0,0,0,.4);
+  }
+  .en{font-family:'Cormorant Garamond',serif;letter-spacing:.06em;}
+  .center{text-align:center;}
+
+  /* ===== 로그인(인트로) 화면 ===== */
+  #intro{
+    position:fixed;
+    inset:0;
+    z-index:100;
+    background:linear-gradient(160deg,#3a3833 0%,#211f1b 100%);
+    color:#f4ecdc;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px;
+    transition:opacity .9s ease, visibility .9s ease;
+  }
+  #intro.hide{opacity:0;visibility:hidden;}
+  #intro .ring{
+    width:160px;height:160px;border-radius:50%;
+    border:1px solid rgba(212,182,120,.45);
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:34px;position:relative;
+    animation:spin 22s linear infinite;
+  }
+  #intro .ring::before{
+    content:"";position:absolute;inset:14px;border-radius:50%;
+    border:1px dashed rgba(212,182,120,.3);
+  }
+  #intro .ring .heart{font-size:34px;color:var(--gold);animation:beat 1.8s ease-in-out infinite;}
+  #intro .logo-en{font-family:'Cormorant Garamond',serif;font-size:30px;letter-spacing:.12em;font-style:italic;color:#efe4cd;}
+  #intro .logo-names{font-family:'Cormorant Garamond',serif;font-size:21px;letter-spacing:.18em;margin-top:14px;color:var(--gold);}
+  #intro .logo-kr{font-size:15px;letter-spacing:.25em;margin-top:8px;color:#cfc6b3;}
+  #intro .logo-date{font-size:13px;letter-spacing:.4em;margin-top:22px;color:#9d9684;}
+  #enterBtn{
+    margin-top:46px;
+    background:transparent;
+    border:1px solid var(--gold);
+    color:var(--gold);
+    font-family:'Nanum Myeongjo',serif;
+    font-size:14px;letter-spacing:.3em;
+    padding:14px 34px;border-radius:40px;
+    cursor:pointer;
+    transition:.3s;
+  }
+  #enterBtn:active{background:var(--gold);color:#211f1b;}
+
+  /* ===== 공통 상단 헤더 ===== */
+  header#top{
+    position:sticky;top:0;z-index:40;
+    background:rgba(251,247,240,.86);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+    padding:11px 0;
+    text-align:center;
+  }
+  header#top .h-en{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;letter-spacing:.08em;color:var(--gold);}
+  header#top .h-names{font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:.22em;color:var(--soft);margin-top:1px;}
+
+  /* ===== 표지 ===== */
+  .cover{padding:46px 28px 40px;text-align:center;position:relative;}
+  .cover .label{font-size:12px;letter-spacing:.45em;color:var(--gold);}
+  .cover h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-style:italic;font-size:34px;line-height:1.3;margin:18px 0 26px;color:var(--ink);}
+  .cover .photo{
+    width:100%;border-radius:200px 200px 14px 14px;overflow:hidden;
+    box-shadow:0 18px 40px rgba(90,75,50,.22);
+    border:1px solid var(--line);
+  }
+  .cover .photo img{width:100%;display:block;}
+  .cover .meta{margin-top:24px;font-size:15px;letter-spacing:.05em;color:var(--ink);}
+  .cover .meta .d{color:var(--gold);font-weight:700;}
+  .cover .meta .v{font-size:13.5px;color:var(--soft);margin-top:4px;}
+
+  /* ===== 섹션 공통 ===== */
+  section{padding:48px 30px;}
+  .sec-title{text-align:center;margin-bottom:30px;}
+  .sec-title .en{display:block;font-size:13px;letter-spacing:.4em;color:var(--gold);text-transform:uppercase;}
+  .sec-title .kr{display:block;font-size:19px;letter-spacing:.2em;margin-top:8px;color:var(--ink);}
+  .divider{width:1px;height:38px;background:var(--line);margin:0 auto 26px;}
+
+  .invite p{text-align:center;font-size:15px;color:#5d574c;}
+  .invite .poem{margin-top:4px;}
+
+  /* ===== 신랑신부 ===== */
+  .couple{display:flex;gap:16px;}
+  .person{flex:1;text-align:center;}
+  .person .pic{border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 8px 22px rgba(90,75,50,.15);}
+  .person .pic img{width:100%;display:block;aspect-ratio:3/4;object-fit:cover;}
+  .person .role{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:var(--gold);margin-top:12px;}
+  .person .name{font-size:18px;font-weight:700;letter-spacing:.06em;margin-top:2px;}
+  .person .parent{font-size:12px;color:var(--soft);margin-top:6px;line-height:1.6;}
+  .call-btns{display:flex;flex-direction:column;gap:10px;margin-top:26px;}
+  .call-btn{
+    display:flex;align-items:center;justify-content:center;gap:8px;
+    text-decoration:none;color:var(--ink);
+    border:1px solid var(--line);background:var(--paper);
+    border-radius:40px;padding:13px;font-size:14px;letter-spacing:.04em;
+    transition:.25s;
+  }
+  .call-btn:active{background:var(--sage);color:#fff;border-color:var(--sage);}
+  .call-btn .ico{color:var(--rose);}
+
+  /* ===== 결혼식 사진 갤러리 (가운데 애니메이션) ===== */
+  .gallery{background:linear-gradient(180deg,#f6efe2,#fbf7f0);position:relative;}
+  .stage{
+    position:relative;
+    height:430px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  /* 가운데 애니메이션 레이어 (사진 뒤/사이) */
+  .anim-core{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;}
+  .anim-core .halo{
+    width:300px;height:300px;border-radius:50%;
+    background:radial-gradient(circle,rgba(189,162,104,.18),transparent 65%);
+    animation:pulse 4s ease-in-out infinite;
+  }
+  .anim-core .orbit{
+    position:absolute;width:340px;height:340px;border-radius:50%;
+    border:1px dashed rgba(154,165,131,.5);
+    animation:spin 26s linear infinite;
+  }
+  .anim-core .orbit2{
+    position:absolute;width:250px;height:250px;border-radius:50%;
+    border:1px solid rgba(189,162,104,.35);
+    animation:spin 18s linear infinite reverse;
+  }
+  .anim-core .core-heart{
+    position:absolute;font-size:30px;color:var(--rose);
+    animation:beat 1.6s ease-in-out infinite;
+    text-shadow:0 4px 14px rgba(217,143,147,.5);
+  }
+  /* 실사 사진(앞쪽) — 부채꼴 카드 */
+  .stage .shot{
+    position:absolute;width:150px;border-radius:12px;overflow:hidden;
+    box-shadow:0 14px 30px rgba(70,55,30,.3);
+    border:4px solid #fff;
+    transition:transform .6s ease;
+  }
+  .stage .shot img{width:100%;display:block;aspect-ratio:2/3;object-fit:cover;}
+  .stage .s1{transform:rotate(-11deg) translateX(-78px) translateY(8px);z-index:2;}
+  .stage .s2{transform:translateY(-14px) scale(1.06);z-index:3;}
+  .stage .s3{transform:rotate(11deg) translateX(78px) translateY(8px);z-index:2;}
+  /* 떨어지는 꽃잎 */
+  .petals{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:5;}
+  .petal{position:absolute;top:-24px;font-size:16px;color:var(--rose);opacity:.0;animation:fall linear infinite;}
+  .gallery .caption{text-align:center;margin-top:30px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--soft);letter-spacing:.06em;}
+
+  /* ===== 마음 전하실 곳 ===== */
+  .accounts{background:var(--paper);}
+  .acc-card{
+    border:1px solid var(--line);border-radius:14px;
+    padding:18px 20px;margin-bottom:14px;background:var(--ivory);
+  }
+  .acc-card .side{font-size:13px;letter-spacing:.2em;color:var(--gold);margin-bottom:8px;}
+  .acc-card .bank{font-size:15px;font-weight:700;}
+  .acc-card .num{font-size:15px;letter-spacing:.04em;margin:4px 0;color:#5d574c;}
+  .acc-card .holder{font-size:12.5px;color:var(--soft);}
+  .copy{
+    float:right;font-size:11px;letter-spacing:.1em;color:var(--soft);
+    border:1px solid var(--line);border-radius:30px;padding:6px 12px;
+    background:#fff;cursor:pointer;
+  }
+  .copy:active{background:var(--gold);color:#fff;}
+
+  /* ===== 푸터 ===== */
+  footer{background:#2f2c27;color:#cfc6b3;text-align:center;padding:40px 28px 48px;}
+  footer .fen{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;color:var(--gold);letter-spacing:.08em;}
+  footer .fkr{font-size:13px;letter-spacing:.18em;margin-top:12px;color:#a59c89;}
+
+  /* ===== 애니메이션 키프레임 ===== */
+  @keyframes spin{to{transform:rotate(360deg);}}
+  @keyframes beat{0%,100%{transform:scale(1);}50%{transform:scale(1.18);}}
+  @keyframes pulse{0%,100%{transform:scale(.9);opacity:.7;}50%{transform:scale(1.1);opacity:1;}}
+  @keyframes fall{
+    0%{transform:translateY(0) rotate(0);opacity:0;}
+    10%{opacity:.9;}
+    100%{transform:translateY(470px) rotate(360deg);opacity:0;}
+  }
+  /* 스크롤 등장 */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease;}
+  .reveal.in{opacity:1;transform:none;}
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;}
+    .reveal{opacity:1;transform:none;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== 로그인(인트로) 화면 : logo.txt 공통 사용 ===== -->
+<div id="intro">
+  <div class="ring"><span class="heart">♥</span></div>
+  <div class="logo-en" data-logo="0">Always be with you</div>
+  <div class="logo-names" data-logo="1">Dmitri &amp; Lorelei</div>
+  <div class="logo-kr" data-logo="2">드미트리 ♥ 로렐라이</div>
+  <div class="logo-date" data-logo="3">2026 . 06 . 26</div>
+  <button id="enterBtn">초 대 장 열 기</button>
+</div>
+
+<div id="app">
+
+  <!-- ===== 공통 상단 헤더 : logo.txt 공통 사용 ===== -->
+  <header id="top">
+    <div class="h-en" data-logo="0">Always be with you</div>
+    <div class="h-names" data-logo="1">Dmitri &amp; Lorelei</div>
+  </header>
+
+  <!-- ===== 표지 ===== -->
+  <div class="cover">
+    <div class="label">WEDDING INVITATION</div>
+    <h1>Always be<br/>with you</h1>
+    <div class="photo">
+      <img src="pictures/함께1.png" alt="신랑신부" />
+    </div>
+    <div class="meta">
+      <div class="d">2026. 06. 26 (금) 오후 12시</div>
+      <div class="v">나나컨벤션센터 2층 플로렌스홀</div>
+    </div>
+  </div>
+
+  <!-- ===== 초대합니다 ===== -->
+  <section class="invite reveal">
+    <div class="sec-title">
+      <span class="en">Invitation</span>
+      <span class="kr">초대합니다</span>
+    </div>
+    <div class="divider"></div>
+    <p class="poem">
+      저희의 영원한 사랑을<br/>
+      깨지지 않는 약속으로 하늘에 아로새기어<br/>
+      서로의 동반자가 되어<br/>
+      인생의 여정을 출발하고자 합니다.<br/><br/>
+      저희 두 사람의 약속이<br/>
+      더욱 빛날 수 있도록<br/>
+      부디 방문하시어<br/>
+      따뜻한 격려와 축복을 부탁드립니다.
+    </p>
+  </section>
+
+  <!-- ===== 신랑 & 신부 ===== -->
+  <section class="reveal">
+    <div class="sec-title">
+      <span class="en">Groom &amp; Bride</span>
+      <span class="kr">신랑 &amp; 신부</span>
+    </div>
+    <div class="couple">
+      <div class="person">
+        <div class="pic"><img src="pictures/신랑.png" alt="신랑" /></div>
+        <div class="role">Groom</div>
+        <div class="name">드미트리</div>
+        <div class="parent">루크사트 · 파르벤<br/>의 아들</div>
+      </div>
+      <div class="person">
+        <div class="pic"><img src="pictures/신부.png" alt="신부" /></div>
+        <div class="role">Bride</div>
+        <div class="name">로렐라이</div>
+        <div class="parent">마키아토 · 페르시카<br/>의 딸</div>
+      </div>
+    </div>
+    <div class="call-btns">
+      <a class="call-btn" href="tel:01000000000"><span class="ico">☎</span> 지금 신랑에게 연락하세요</a>
+      <a class="call-btn" href="tel:01000000000"><span class="ico">☎</span> 지금 신부에게 연락하세요</a>
+    </div>
+  </section>
+
+  <!-- ===== 결혼식 사진 + 가운데 애니메이션 ===== -->
+  <section class="gallery reveal">
+    <div class="sec-title">
+      <span class="en">Our Moments</span>
+      <span class="kr">결혼식 사진</span>
+    </div>
+    <div class="stage">
+      <!-- 가운데 애니메이션 레이어 -->
+      <div class="anim-core">
+        <div class="orbit"></div>
+        <div class="orbit2"></div>
+        <div class="halo"></div>
+        <div class="core-heart">♥</div>
+      </div>
+      <!-- 앞쪽 실사 사진 -->
+      <div class="shot s1"><img src="pictures/함께1.png" alt="함께1" /></div>
+      <div class="shot s2"><img src="pictures/함께2.png" alt="함께2" /></div>
+      <div class="shot s3"><img src="pictures/함께3.png" alt="함께3" /></div>
+      <!-- 떨어지는 꽃잎 -->
+      <div class="petals" id="petals"></div>
+    </div>
+    <div class="caption">forever &amp; always</div>
+  </section>
+
+  <!-- ===== 마음 전하시는 곳 ===== -->
+  <section class="accounts reveal">
+    <div class="sec-title">
+      <span class="en">Thank You</span>
+      <span class="kr">마음 전하시는 곳</span>
+    </div>
+    <div class="divider"></div>
+    <div class="acc-card">
+      <button class="copy" data-acc="100-0000-00000">복사</button>
+      <div class="side">신랑측</div>
+      <div class="bank">샤드은행</div>
+      <div class="num">100-0000-00000</div>
+      <div class="holder">예금주 · 파르벤</div>
+    </div>
+    <div class="acc-card">
+      <button class="copy" data-acc="100-0000-0000">복사</button>
+      <div class="side">신부측</div>
+      <div class="bank">크레딧은행</div>
+      <div class="num">100-0000-0000</div>
+      <div class="holder">예금주 · 페르시카</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="fen">Always be with you</div>
+    <div class="fkr">드미트리 &amp; 로렐라이 · 2026. 06. 26</div>
+  </footer>
+
+</div>
+
+<script>
+  // ===== 공통 logo.txt 불러오기 (상단 헤더 + 로그인 화면 공유) =====
+  (async function loadLogo(){
+    try{
+      const res = await fetch('logo.txt', {cache:'no-store'});
+      if(!res.ok) return;
+      const lines = (await res.text()).split(/\r?\n/).map(s=>s.trim());
+      document.querySelectorAll('[data-logo]').forEach(el=>{
+        const v = lines[+el.dataset.logo];
+        if(v) el.textContent = v;
+      });
+    }catch(e){ /* file:// 등에서 실패 시 기본 텍스트 유지 */ }
+  })();
+
+  // ===== 인트로(로그인) 화면 닫기 =====
+  document.getElementById('enterBtn').addEventListener('click', ()=>{
+    document.getElementById('intro').classList.add('hide');
+    document.body.style.background = '#2c2a26';
+  });
+
+  // ===== 꽃잎 생성 =====
+  (function petals(){
+    const box = document.getElementById('petals');
+    const marks = ['❀','✿','♥','❁'];
+    for(let i=0;i<14;i++){
+      const p = document.createElement('span');
+      p.className='petal';
+      p.textContent = marks[i % marks.length];
+      p.style.left = Math.random()*100 + '%';
+      p.style.fontSize = (12 + Math.random()*12) + 'px';
+      p.style.animationDuration = (5 + Math.random()*5) + 's';
+      p.style.animationDelay = (Math.random()*6) + 's';
+      p.style.color = i%2 ? '#d98f93' : '#bda268';
+      box.appendChild(p);
+    }
+  })();
+
+  // ===== 스크롤 등장 애니메이션 =====
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} });
+  },{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // ===== 계좌 복사 =====
+  document.querySelectorAll('.copy').forEach(btn=>{
+    btn.addEventListener('click', async ()=>{
+      try{
+        await navigator.clipboard.writeText(btn.dataset.acc);
+        const t = btn.textContent; btn.textContent='복사됨';
+        setTimeout(()=>btn.textContent=t,1200);
+      }catch(e){
+        const t = btn.textContent; btn.textContent=btn.dataset.acc;
+        setTimeout(()=>btn.textContent=t,1500);
+      }
+    });
+  });
+</script>
+</body>
+</html>

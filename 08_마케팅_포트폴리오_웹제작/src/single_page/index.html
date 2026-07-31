@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>홍길동 | 프리랜서 마케터</title>
+  <meta name="description" content="프리랜서 마케터 홍길동의 포트폴리오. ROI 340%, 누적 캠페인 예산 12억, 클라이언트 유지율 91%를 바탕으로 성장형 마케팅을 설계합니다.">
+  <meta name="keywords" content="프리랜서 마케터, 마케팅 포트폴리오, ROI, 성장 마케팅, CRM 최적화">
+  <meta property="og:title" content="홍길동 | 프리랜서 마케터 포트폴리오">
+  <meta property="og:description" content="ROI 340%, 누적 캠페인 예산 12억, 클라이언트 유지율 91%. 빠르게 읽히는 마케팅 성과 중심 포트폴리오입니다.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://your-domain.com/">
+  <meta name="theme-color" content="#0f4c81">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #eff6ff;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --accent: #1d4ed8;
+      --accent-darker: #172f6d;
+      --accent-soft: #dbeafe;
+      --border: rgba(29, 78, 216, 0.16);
+      --radius: 28px;
+      --shadow: 0 28px 80px rgba(15, 23, 42, 0.08);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .page {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 32px 0 64px;
+    }
+    header {
+      padding: 28px 0 12px;
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+    .nav strong {
+      color: var(--text);
+    }
+    .hero {
+      display: grid;
+      gap: 28px;
+      padding: 42px 0 24px;
+      background: linear-gradient(180deg, rgba(219, 234, 254, 0.95) 0%, rgba(255, 255, 255, 0.82) 100%);
+      border-radius: 32px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(29, 78, 216, 0.12);
+      padding: 46px 0 30px;
+    }
+    .hero-copy {
+      max-width: 720px;
+    }
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-weight: 700;
+      color: var(--accent);
+      font-size: 0.82rem;
+      margin-bottom: 18px;
+    }
+    .hero-copy h1 {
+      margin: 0;
+      font-size: clamp(2.8rem, 4.5vw, 4.8rem);
+      line-height: 0.98;
+      letter-spacing: -0.04em;
+    }
+    .hero-copy p {
+      margin: 24px 0 0;
+      max-width: 560px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+    .button,
+    .button-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+      padding: 14px 22px;
+    }
+    .button {
+      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+      color: #fff;
+      box-shadow: 0 22px 50px rgba(29, 78, 216, 0.18);
+    }
+    .button-secondary {
+      background: rgba(29, 78, 216, 0.08);
+      color: var(--accent-darker);
+      border-color: transparent;
+    }
+    .button:hover,
+    .button-secondary:hover {
+      transform: translateY(-1px);
+    }
+    .stats {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .stat-card {
+      background: linear-gradient(180deg, #ffffff 0%, #eff6ff 100%);
+      border: 1px solid rgba(29, 78, 216, 0.14);
+      border-radius: 28px;
+      padding: 28px;
+      min-height: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 18px 40px rgba(29, 78, 216, 0.06);
+    }
+    .stat-card strong {
+      display: block;
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .section {
+      margin-top: 64px;
+    }
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid rgba(29, 78, 216, 0.12);
+      padding-bottom: 16px;
+    }
+    .section-header h2 {
+      margin: 0;
+      font-size: clamp(1.7rem, 2.1vw, 2.4rem);
+    }
+    .section-header p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 640px;
+      font-size: 1rem;
+    }
+    .grid-3,
+    .grid-4 {
+      display: grid;
+      gap: 18px;
+    }
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .grid-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 26px;
+      min-height: 170px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .card span {
+      font-size: 0.95rem;
+      color: var(--muted);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .card h3 {
+      margin: 0;
+      font-size: 1.15rem;
+    }
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.99rem;
+    }
+    .card strong {
+      font-size: 1.05rem;
+      color: var(--text);
+    }
+    .logos {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .logo-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 96px;
+      background: linear-gradient(135deg, #eff6ff, #ffffff);
+      border: 1px solid rgba(29, 78, 216, 0.12);
+      border-radius: 22px;
+      color: #1e293b;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.94rem;
+      padding: 16px;
+      text-align: center;
+      box-shadow: 0 18px 40px rgba(29, 78, 216, 0.06);
+    }
+    .testimonial-grid {
+      display: grid;
+      gap: 18px;
+    }
+    .testimonial {
+      background: #ffffff;
+      border: 1px solid rgba(29, 78, 216, 0.12);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 20px 48px rgba(29, 78, 216, 0.05);
+    }
+    .testimonial p {
+      margin: 0;
+      font-size: 1rem;
+      color: var(--text);
+    }
+    .testimonial-footer {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .testimonial-footer strong {
+      font-size: 1rem;
+    }
+    .testimonial-footer span {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      display: grid;
+      gap: 18px;
+    }
+    .contact-card h3 {
+      margin: 0;
+      font-size: 1.55rem;
+    }
+    .contact-grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: 1.3fr 0.9fr;
+    }
+    .form-field {
+      display: grid;
+      gap: 8px;
+    }
+    .form-field label {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .form-field input,
+    .form-field textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px 16px;
+      font-size: 1rem;
+      color: var(--text);
+      background: #fafbff;
+    }
+    .form-field textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+    .contact-meta {
+      display: grid;
+      gap: 14px;
+      align-content: start;
+    }
+    .contact-meta a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text);
+      font-weight: 700;
+    }
+    .contact-meta .meta-label {
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .footer-note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+    @media (max-width: 900px) {
+      .stats,
+      .grid-3,
+      .grid-4,
+      .logos,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero {
+        padding-top: 20px;
+      }
+    }
+    @media (max-width: 620px) {
+      .page {
+        width: min(100%, calc(100% - 24px));
+        padding-top: 24px;
+      }
+      header {
+        padding: 20px 0 12px;
+      }
+      .hero-copy h1 {
+        font-size: clamp(2.4rem, 10vw, 3.4rem);
+      }
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .hero-actions {
+        flex-direction: column;
+      }
+      .button,
+      .button-secondary {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <nav class="nav" aria-label="Primary navigation">
+        <div><strong>홍길동</strong></div>
+        <div>프리랜서 마케터 / Growth Specialist</div>
+      </nav>
+    </header>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow">홍길동 · 프리랜서 마케터</div>
+        <h1 id="hero-title">성과 중심 마케팅으로 성장 곡선을 빠르게 설계합니다.</h1>
+        <p>리드 제너레이션, 캠페인 실행, CRM 최적화까지. 숫자로 증명할 수 있는 마케팅 성과를 30초 안에 보여주는 구조로 구성했습니다.</p>
+        <div class="hero-actions">
+          <a class="button" href="#contact">지금 문의하기</a>
+          <a class="button-secondary" href="mailto:hello@example.com">hello@example.com</a>
+        </div>
+      </div>
+
+      <div class="stats" aria-label="핵심 성과 지표">
+        <article class="stat-card">
+          <strong>340%</strong>
+          <div>마케팅 ROI 달성</div>
+        </article>
+        <article class="stat-card">
+          <strong>₩12억</strong>
+          <div>캠페인 예산 누적</div>
+        </article>
+        <article class="stat-card">
+          <strong>91%</strong>
+          <div>클라이언트 유지율</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="strengths-title">
+      <div class="section-header">
+        <h2 id="strengths-title">핵심 역량</h2>
+        <p>빠르게 읽히는 구성으로, 채용 담당자가 한눈에 어떤 가치를 제공하는지 이해할 수 있도록 설계했습니다.</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <span>데이터 기반 전략</span>
+          <h3>가설 중심 광고 로드맵</h3>
+          <p>성과 지표에 따라 매체 교체와 예산 재배치 결정을 빠르게 실행합니다.</p>
+        </article>
+        <article class="card">
+          <span>성과 최적화</span>
+          <h3>CPA / ROAS 집중 관리</h3>
+          <p>광고 채널별 KPI를 분해해 전환과 브랜딩 모두를 유지합니다.</p>
+        </article>
+        <article class="card">
+          <span>운영 전달력</span>
+          <h3>조직 내 실행 속도</h3>
+          <p>보고서와 제안서를 간결하게 구성해 빠른 의사결정을 지원합니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="projects-title">
+      <div class="section-header">
+        <h2 id="projects-title">프로젝트</h2>
+        <p>4개의 프로젝트 카드로, 담당 역할과 결과를 빠르게 확인할 수 있도록 구성했습니다.</p>
+      </div>
+      <div class="grid-4">
+        <article class="card">
+          <span>소비재 D2C</span>
+          <h3>광고 운영 + 퍼널 설계</h3>
+          <p><strong>전환율 2.3배</strong> 상승, 누적 ROAS 420%</p>
+          <p>페이스북, 인스타, 구글</p>
+        </article>
+        <article class="card">
+          <span>테크 스타트업</span>
+          <h3>리드 생성 캠페인</h3>
+          <p><strong>월 3배</strong> 리드 증가, CAC 28% 개선</p>
+          <p>LinkedIn, 네이버 검색, CRM</p>
+        </article>
+        <article class="card">
+          <span>프랜차이즈 브랜드</span>
+          <h3>브랜드 캠페인</h3>
+          <p><strong>인지도 48%</strong> 상승, 방문전환 18% 증가</p>
+          <p>유튜브, 네이버 쇼핑, 바이럴</p>
+        </article>
+        <article class="card">
+          <span>이커머스</span>
+          <h3>리타겟팅 자동화</h3>
+          <p><strong>구매 전환 35%</strong> 개선, 재방문 26% 상승</p>
+          <p>Google Ads, CRM, 매크로</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="logos-title">
+      <div class="section-header">
+        <h2 id="logos-title">클라이언트 로고</h2>
+        <p>신뢰도를 빠르게 전달하는 공간입니다. 로고가 없을 경우 텍스트 형태로도 충분히 구조를 유지합니다.</p>
+      </div>
+      <div class="logos">
+        <div class="logo-item">Brand A</div>
+        <div class="logo-item">Brand B</div>
+        <div class="logo-item">Brand C</div>
+        <div class="logo-item">Brand D</div>
+        <div class="logo-item">Brand E</div>
+        <div class="logo-item">Brand F</div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="testimonials-title">
+      <div class="section-header">
+        <h2 id="testimonials-title">추천사</h2>
+        <p>사회적 증거를 통해 신뢰를 더합니다. 짧고 구체적인 한 문장이 더 효과적입니다.</p>
+      </div>
+      <div class="testimonial-grid">
+        <article class="testimonial">
+          <p>"홍길동 님과 함께한 캠페인은 실행 속도와 결과 모두 확실했습니다. ROI가 빠르게 개선되어 다음 시즌 확대를 결정했습니다."</p>
+          <div class="testimonial-footer">
+            <strong>홍길동</strong>
+            <span>브랜드 마케팅 매니저, XYZ컴퍼니</span>
+          </div>
+        </article>
+        <article class="testimonial">
+          <p>"데이터 분석과 실행 로직이 명확해서 협업이 쉬웠습니다. 목표 대비 성과가 빠르게 나타났고 내부 합의를 얻기 수월했습니다."</p>
+          <div class="testimonial-footer">
+            <strong>김지원</strong>
+            <span>Growth Lead, ABC 스타트업</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="section-header">
+        <h2 id="contact-title">Contact</h2>
+        <p>백엔드 없이도 Netlify Forms로 메시지를 받을 수 있습니다. 이메일로 바로 연결할 수도 있습니다.</p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-grid">
+          <div>
+            <h3>같이 성장할 마케팅을 설계하고 싶다면</h3>
+            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+              <input type="hidden" name="form-name" value="contact">
+              <input type="hidden" name="bot-field">
+              <div class="form-field">
+                <label for="name">이름</label>
+                <input id="name" name="name" type="text" required placeholder="홍길동">
+              </div>
+              <div class="form-field">
+                <label for="email">이메일</label>
+                <input id="email" name="email" type="email" required placeholder="hello@example.com">
+              </div>
+              <div class="form-field">
+                <label for="message">문의 내용</label>
+                <textarea id="message" name="message" required placeholder="함께 논의하고 싶은 프로젝트 내용을 적어주세요."></textarea>
+              </div>
+              <button class="button" type="submit">메시지 보내기</button>
+            </form>
+          </div>
+          <aside class="contact-meta">
+            <div>
+              <div class="meta-label">이메일</div>
+              <a href="mailto:hello@example.com">hello@example.com</a>
+            </div>
+            <div>
+              <div class="meta-label">연락처</div>
+              <div>010-1234-5678</div>
+            </div>
+            <div>
+              <div class="meta-label">네트워크</div>
+              <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+            </div>
+            <p class="footer-note">이 페이지는 단일 HTML 파일로 구성되어 즉시 배포와 빠른 유지보수가 가능합니다.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

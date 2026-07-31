@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.logitics.erp.employee.mapper.EmployeeMapper">
+
+    <select id="getTest"
+        parameterType="SearchEmployeeRequest"
+        resultType="EmployeeListResponse">
+    >
+        select *
+        from employee e
+        left join employee_military
+
+    </select>
+
+    <select id="getEmployees"
+        resultType="EmployeeListResponse"
+    >
+        select
+            e.*,
+            e.phone as phone,
+            e.email as email,
+            e.address as address,
+            e.detailed_address as detailedAddress,
+            e.post_code as postCode,
+            COALESCE(e.hire_date, DATE(e.created_at)) as hireDate,
+            e.employee_status_code as status,
+            p.position_name as positionName,
+            d.department_name as departmentName
+        from employee e
+            left join positions p
+                on p.position_id = e.position_id
+            left join department d
+                on e.department_id = d.department_id
+        where 1=1
+
+        <if test="request.keyword != null and request.keyword != ''">
+            AND (
+            e.name = #{request.keyword}
+            OR e.employee_no = #{request.keyword}
+            )
+        </if>
+
+        <if test="request.departmentName != null and request.departmentName != '' and request.departmentName != '전체'">
+            AND d.department_name = #{request.departmentName}
+        </if>
+
+        <if test="request.positionName != null and request.positionName != '' and request.positionName != '전체'">
+            AND p.position_name = #{request.positionName}
+        </if>
+
+        <if test="request.employeeStatusCode != null and request.employeeStatusCode != '' and request.employeeStatusCode != '전체'">
+            AND e.employee_status_code = #{request.employeeStatusCode}
+        </if>
+
+
+        limit #{size} offset #{offset}
+    </select>
+
+
+</mapper>

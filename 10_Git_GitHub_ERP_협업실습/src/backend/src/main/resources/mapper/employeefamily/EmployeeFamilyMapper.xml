@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.logitics.erp.employeefamily.mapper.EmployeeFamilyMapper">
+
+    <select id="getEmployeeFamilyInfo"
+        resultType="EmployeeFamilyInfoResponse"
+    >
+        SELECT * FROM employee_family ef
+        WHERE ef.employee_id =
+            (SELECT employee_id from employee e where e.employee_no = #{employeeNo})
+
+    </select>
+
+
+    <insert id="addFamiliyInfo">
+        INSERT INFO employee_family(
+            employee_id,
+            family_name,
+            family_relation,
+            birth_date,
+            job,
+            company_name,
+            living_together,
+            dependent,
+            disabled
+        ) VALUES (
+            #{employeeId},
+            #{familyName},
+            #{familyRelation},
+            #{birthDate},
+            #{job},
+            #{companyName},
+            #{livingTogether},
+            #{dependent},
+            #{disabled}
+        )
+
+    </insert>
+
+    <update id="deleteFamilyInfo">
+        UPDATE employee_family ef
+            SET deleted = true
+        WHERE ef.employee_family_id = #{familyId}
+    </update>
+
+</mapper>

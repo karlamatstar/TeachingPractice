@@ -1,0 +1,17 @@
+﻿text,label,predicted_label,is_correct
+손흥민 어제 경기 어땠어?,sports_agent,sports_agent,True
+프로야구 순위 알려줘,sports_agent,sports_agent,True
+축구 경기 몇 시에 시작해?,sports_agent,sports_agent,True
+농구 결과 보여줘,sports_agent,sports_agent,True
+15분 타이머 설정해줘,timer_agent,timer_agent,True
+한국 시간 지금 몇 시야?,timer_agent,timer_agent,True
+20분 뒤에 알려줘,timer_agent,timer_agent,True
+알람 맞춰줘,timer_agent,timer_agent,True
+치킨 한 마리 주문해줘,order_agent,order_agent,True
+피자 배달 시켜줘,order_agent,order_agent,True
+결제 방법 알려줘,order_agent,sports_agent,False
+주문을 취소하고 싶어요,order_agent,order_agent,True
+오늘 너무 피곤해,general_chat,general_chat,True
+좋은 말 해줘,general_chat,general_chat,True
+반가워,general_chat,general_chat,True
+ㅋㅋㅋㅋ,general_chat,general_chat,True

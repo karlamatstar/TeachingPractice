@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.logitics.erp.employeeappointment.mapper.EmployeeAppointmentMapper">
+
+    <select id="getEmployeeAppointmentHistory">
+        SELECT ea.*
+            FROM employee_appointment ea
+            LEFT JOIN employee e
+                ON e.employee_id = ea.employee_id
+        WHERE 1=1
+        <if test="keyword != null and keyword != ''">
+            AND (
+                e.employee_no LIKE CONCAT('%', #{keyword}, '%')
+                OR e.name LIKE CONCAT('%', #{keyword}, '%')
+            )
+        </if>
+
+        ORDER BY ea.appointment_date DESC
+
+        LIMIT #{size}
+        OFFSET #{offset}
+
+    </select>
+
+    <insert
+        id="registerAppointment"
+    >
+        INSERT INTO employee_appointment(
+            appointment_type,
+            appointment_date,
+            effective_date,
+            from_department_id,
+            to_department_id,
+            from_position_name,
+            to_position_name,
+            from_job_title,
+            to_job_title,
+            reason,
+            memo,
+        )
+        VALUES (
+            #{appointmentType},
+            #{appointmentDate},
+            #{effectiveDate},
+            #{fromDepartmentId},
+            #{toDepartmentId},
+            #{fromPositionName},
+            #{toPositionName},
+            #{fromJobTitle},
+            #{toJobTitle},
+            #{reason},
+            #{memo},
+        )
+    </insert>
+
+
+</mapper>

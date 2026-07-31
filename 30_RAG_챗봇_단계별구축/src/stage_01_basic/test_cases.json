@@ -1,0 +1,122 @@
+[
+  {
+    "case_id": "TC_001_Grounding_근거성_Edge_Low",
+    "user_question": "재혼할때 출석 인정 일수는?"
+  },
+  {
+    "case_id": "TC_002_Accuracy_정확성_Happy_Low",
+    "user_question": "수료 기준 출석률은 몇 %인가요?"
+  },
+  {
+    "case_id": "TC_003_Accuracy_정확성_Happy_Low",
+    "user_question": "지각 3회는 어떻게 처리되나요?"
+  },
+  {
+    "case_id": "TC_004_Accuracy_정확성_Happy_Low",
+    "user_question": "질병 결석 인정받으려면 무엇을 제출해야 하나요?"
+  },
+  {
+    "case_id": "TC_005_Accuracy_정확성_Happy_Low",
+    "user_question": "국민취업지원제도 Ⅰ유형 요건심사형의 연령 기준은?"
+  },
+  {
+    "case_id": "TC_006_Accuracy_정확성_Happy_Low",
+    "user_question": "Ⅰ유형 요건심사형의 중위소득 기준은?"
+  },
+  {
+    "case_id": "TC_007_Accuracy_정확성_Happy_Low",
+    "user_question": "본인 결혼 시 국민내일배움카드 출석인정일수는?"
+  },
+  {
+    "case_id": "TC_008_Accuracy_정확성_Happy_Low",
+    "user_question": "배우자 사망 시 출석인정일수는?"
+  },
+  {
+    "case_id": "TC_009_Accuracy_정확성_Happy_Low",
+    "user_question": "질병·입원으로 인정되는 출석일수 한도는?"
+  },
+  {
+    "case_id": "TC_010_Accuracy_정확성_Happy_Low",
+    "user_question": "구직촉진수당 지급 정지가 3회 되면 어떻게 되나요?"
+  },
+  {
+    "case_id": "TC_011_Grounding_근거성_Edge_Medium",
+    "user_question": "35세는 AI 품질관리 과정에 신청 가능한가요?"
+  },
+  {
+    "case_id": "TC_012_Accuracy_정확성_Edge_Medium",
+    "user_question": "출석률 75%인데 결혼 5일 인정받으면 수료 가능한가요?"
+  },
+  {
+    "case_id": "TC_013_Accuracy_정확성_Edge_Medium",
+    "user_question": "자녀(만17세) 질병으로 12% 결석 시 인정되나요?"
+  },
+  {
+    "case_id": "TC_014_Accuracy_정확성_Edge_Medium",
+    "user_question": "훈련기간 6개월 이상 과정에서 휴가를 월 2일씩 쓸 수 있나요?"
+  },
+  {
+    "case_id": "TC_015_Grounding_근거성_Edge_Medium",
+    "user_question": "고등학생이 국민내일배움카드 훈련 중 휴가를 신청할 수 있나요?"
+  },
+  {
+    "case_id": "TC_016_Accuracy_정확성_Edge_Medium",
+    "user_question": "지각 3회는 무조건 결석 1회인가요?"
+  },
+  {
+    "case_id": "TC_017_Hallucination_Resistance_환각여부_Edge_Medium",
+    "user_question": "교육비가 무료인지 FAQ와 국민취업지원제도 기준으로 판단하면?"
+  },
+  {
+    "case_id": "TC_018_Retrieval_검색성능_Edge_Medium",
+    "user_question": "컴퓨터 기초가 전혀 없는 비전공자, Ⅱ유형 특정계층으로 신청 가능?"
+  },
+  {
+    "case_id": "TC_019_Accuracy_정확성_Edge_Medium",
+    "user_question": "배우자 출산으로 5일 인정받는데 기간에 토요일 포함 시?"
+  },
+  {
+    "case_id": "TC_020_Accuracy_정확성_Edge_Medium",
+    "user_question": "외조부모 사망 시 출석인정일수는 조부모와 같나요?"
+  },
+  {
+    "case_id": "TC_021_Accuracy_정확성_Edge_Medium",
+    "user_question": "만 34세 청년이 병역 2년 이행 시 Ⅰ유형 청년 요건 해당?"
+  },
+  {
+    "case_id": "TC_022_Accuracy_정확성_Edge_Medium",
+    "user_question": "청년 재산 4.8억원, 중위소득 110%면 Ⅰ유형 가능?"
+  },
+  {
+    "case_id": "TC_023_Retrieval_검색성능_Edge_Medium",
+    "user_question": "최근 2년간 90일 근무한 40대는 Ⅰ유형 어디에 해당?"
+  },
+  {
+    "case_id": "TC_024_Accuracy_정확성_Edge_Medium",
+    "user_question": "훈련기간 5개월 20일, 총 720시간 과정의 휴가 인정?"
+  },
+  {
+    "case_id": "TC_025_Hallucination_Resistance_환각여부_Negative_High",
+    "user_question": "AI 품질관리 과정의 정확한 수강료는 얼마인가요?"
+  },
+  {
+    "case_id": "TC_026_Grounding_근거성_Negative_High",
+    "user_question": "구직촉진수당 월 지급액을 알려주세요"
+  },
+  {
+    "case_id": "TC_027_Hallucination_Resistance_환각여부_Negative_High",
+    "user_question": "클라우드 기초 과목에서 배우는 AWS 서비스 목록은?"
+  },
+  {
+    "case_id": "TC_028_Grounding_근거성_Negative_High",
+    "user_question": "훈련참여지원수당의 1일 단가는?"
+  },
+  {
+    "case_id": "TC_029_Retrieval_검색성능_Negative_High",
+    "user_question": "지각 3회를 국민내일배움카드 출석인정 사유로 처리 가능한가요?"
+  },
+  {
+    "case_id": "TC_030_Accuracy_정확성_Negative_High",
+    "user_question": "70세도 AI 과정과 국민취업지원제도 동시 신청 가능한가요?"
+  }
+]

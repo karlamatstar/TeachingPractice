@@ -1,0 +1,55 @@
+.container {
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+    color: #60A5FA;
+    background-color: #1E293B;
+    height: calc(100vh - 63px);
+}
+
+.menuTitle {
+    display: flex;
+    padding: 12.5px 0px 12.5px 16px;
+    gap: 8px;
+    font-size: 12px;
+    background-color: #162032;
+}
+
+.menuSub {
+    font-size: 12px;
+}
+
+.menuSub li {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 42px;
+    background-color: #1e293b;
+}
+
+.menuSub li.active {
+    background: #2A3F5C;
+    color: #fff;
+}
+
+.menuSub li.active::before {
+    background: #3B82F6;
+}
+
+
+.menuSub li::before {
+    position: absolute;
+    left: 32px;
+    top: 16px;
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50px;
+    background-color: #475569;
+}
+
+
+.img13 {
+    width: 13px;
+    height: 13px;
+}

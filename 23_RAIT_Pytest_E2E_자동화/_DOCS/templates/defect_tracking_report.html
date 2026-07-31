@@ -1,0 +1,135 @@
+
+<style>
+  .report-wrap { padding: 1.5rem 1rem; font-family: var(--font-sans); max-width: 680px; }
+  .report-title { font-size: 18px; font-weight: 500; color: var(--color-text-primary); text-align: center; margin-bottom: 1.5rem; letter-spacing: 0.02em; }
+  .section { border: 0.5px solid var(--color-border-secondary); border-radius: var(--border-radius-lg); margin-bottom: 1rem; overflow: hidden; }
+  .section-header { padding: 8px 16px; font-size: 13px; font-weight: 500; display: flex; align-items: center; gap: 8px; }
+  .sh-review { background: #E6F1FB; color: #0C447C; }
+  .sh-resolve { background: #E1F5EE; color: #085041; }
+  .sh-verify { background: #EEEDFE; color: #3C3489; }
+  .section-body { padding: 12px 16px; background: var(--color-background-primary); display: flex; flex-direction: column; gap: 10px; }
+  .row { display: grid; gap: 8px; align-items: start; }
+  .row-2 { grid-template-columns: 1fr 1fr; }
+  .row-3 { grid-template-columns: 1fr 1fr 1fr; }
+  .field { display: flex; flex-direction: column; gap: 4px; }
+  .field-label { font-size: 11px; color: var(--color-text-secondary); font-weight: 500; letter-spacing: 0.03em; }
+  .field-value { height: 28px; border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-tertiary); background: var(--color-background-secondary); padding: 0 10px; font-size: 13px; color: var(--color-text-primary); display: flex; align-items: center; }
+  .field-value.tall { height: 56px; align-items: flex-start; padding-top: 8px; }
+  .checkbox-group { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; padding-top: 4px; }
+  .cb-item { display: flex; align-items: center; gap: 5px; font-size: 12px; color: var(--color-text-primary); }
+  .cb-box { width: 14px; height: 14px; border: 0.5px solid var(--color-border-secondary); border-radius: 3px; background: var(--color-background-secondary); flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+  .cb-box.checked { background: #378ADD; border-color: #378ADD; }
+  .cb-box.checked::after { content: ''; width: 6px; height: 4px; border-left: 1.5px solid #fff; border-bottom: 1.5px solid #fff; transform: rotate(-45deg) translateY(-1px); display: block; }
+  .divider { height: 0.5px; background: var(--color-border-tertiary); margin: 2px 0; }
+  .badge { display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: 99px; font-size: 11px; font-weight: 500; }
+  .badge-blue { background: #E6F1FB; color: #185FA5; }
+  .badge-green { background: #E1F5EE; color: #0F6E56; }
+  .badge-purple { background: #EEEDFE; color: #534AB7; }
+</style>
+
+<div class="report-wrap">
+  <h2 class="report-title"><i class="ti ti-bug" aria-hidden="true" style="font-size:18px; vertical-align:-2px; margin-right:6px;"></i>결함 추적 보고서</h2>
+
+  <div class="section">
+    <div class="section-header sh-review">
+      <i class="ti ti-search" aria-hidden="true" style="font-size:15px;"></i>
+      결함 검토 정보
+      <span class="badge badge-blue" style="margin-left:auto;">Review</span>
+    </div>
+    <div class="section-body">
+      <div class="row row-3">
+        <div class="field">
+          <span class="field-label">결함 식별자</span>
+          <div class="field-value"></div>
+        </div>
+        <div class="field" style="grid-column: span 2;">
+          <span class="field-label">검토 일자</span>
+          <div class="field-value"></div>
+        </div>
+      </div>
+      <div class="row row-2">
+        <div class="field">
+          <span class="field-label">검토자</span>
+          <div class="field-value"></div>
+        </div>
+        <div class="field">
+          <span class="field-label">처리 유형</span>
+          <div class="checkbox-group">
+            <label class="cb-item"><div class="cb-box checked"></div>담당자 할당</label>
+            <label class="cb-item"><div class="cb-box"></div>처리 연기</label>
+            <label class="cb-item"><div class="cb-box"></div>결함 무시</label>
+          </div>
+        </div>
+      </div>
+      <div class="field">
+        <span class="field-label">검토 설명</span>
+        <div class="field-value tall"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header sh-resolve">
+      <i class="ti ti-tool" aria-hidden="true" style="font-size:15px;"></i>
+      결함 해결 정보
+      <span class="badge badge-green" style="margin-left:auto;">Resolution</span>
+    </div>
+    <div class="section-body">
+      <div class="row row-2">
+        <div class="field">
+          <span class="field-label">해결자</span>
+          <div class="field-value"></div>
+        </div>
+        <div class="field">
+          <span class="field-label">해결 일자</span>
+          <div class="field-value"></div>
+        </div>
+      </div>
+      <div class="field">
+        <span class="field-label">해결 유형</span>
+        <div class="checkbox-group">
+          <label class="cb-item"><div class="cb-box checked"></div>Fixed</label>
+          <label class="cb-item"><div class="cb-box"></div>Duplicated</label>
+          <label class="cb-item"><div class="cb-box"></div>Won't Fix</label>
+          <label class="cb-item"><div class="cb-box"></div>Invalid</label>
+        </div>
+      </div>
+      <div class="field">
+        <span class="field-label">해결 설명</span>
+        <div class="field-value tall"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header sh-verify">
+      <i class="ti ti-shield-check" aria-hidden="true" style="font-size:15px;"></i>
+      결함 해결 검증 정보
+      <span class="badge badge-purple" style="margin-left:auto;">Verification</span>
+    </div>
+    <div class="section-body">
+      <div class="row row-2">
+        <div class="field">
+          <span class="field-label">검증자</span>
+          <div class="field-value"></div>
+        </div>
+        <div class="field">
+          <span class="field-label">검증 일자</span>
+          <div class="field-value"></div>
+        </div>
+      </div>
+      <div class="field">
+        <span class="field-label">검증 결과</span>
+        <div class="checkbox-group">
+          <label class="cb-item"><div class="cb-box"></div>통과</label>
+          <label class="cb-item"><div class="cb-box"></div>재발생</label>
+          <label class="cb-item"><div class="cb-box"></div>보류</label>
+        </div>
+      </div>
+      <div class="field">
+        <span class="field-label">검증 설명</span>
+        <div class="field-value tall"></div>
+      </div>
+    </div>
+  </div>
+</div>

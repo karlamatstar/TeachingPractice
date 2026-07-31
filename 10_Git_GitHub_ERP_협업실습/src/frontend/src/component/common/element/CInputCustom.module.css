@@ -1,0 +1,42 @@
+.inputItem input{
+    border: 1px solid #D1D5DB;
+    width: 100%;
+    border-radius: 10px;
+}
+.normalPadding {
+    padding: 16.5px 10px;
+}
+.inputPadding {
+    padding: 16.5px 44px;
+
+}
+.inputItem input::placeholder{
+    font-size: 14px;
+    font-weight: 400;
+
+}
+
+.inputItem {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.iconPositon {
+    position: absolute;
+    bottom: 18px;
+    left: 12px;
+}
+
+.beforeIcon {
+    position: absolute;
+    bottom: 17px;
+    left: 12px;
+}
+
+.afterIcon {
+    position: absolute;
+    bottom: 17px;
+    right: 12px;
+}

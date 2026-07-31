@@ -1,0 +1,162 @@
+{
+    "root_group": {
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {
+                "FL-001 normal is status 200": {
+                    "fails": 0,
+                    "name": "FL-001 normal is status 200",
+                    "path": "::FL-001 normal is status 200",
+                    "id": "ee6c5a2b6a7ea651932aca912a5d2b91",
+                    "passes": 1
+                },
+                "FL-002 delay 1s is status 200": {
+                    "fails": 0,
+                    "name": "FL-002 delay 1s is status 200",
+                    "path": "::FL-002 delay 1s is status 200",
+                    "id": "94d0a20c658fe86b87919955e7d36a3c",
+                    "passes": 1
+                },
+                "FL-003 delay 5s is status 200": {
+                    "fails": 0,
+                    "name": "FL-003 delay 5s is status 200",
+                    "path": "::FL-003 delay 5s is status 200",
+                    "id": "c20ba4673e20eee4f938f1e3f0b6700f",
+                    "passes": 1
+                },
+                "FL-004 error500 is status 500": {
+                    "id": "61c3f8e50ffae95dd3106bfdc8acd184",
+                    "passes": 1,
+                    "fails": 0,
+                    "name": "FL-004 error500 is status 500",
+                    "path": "::FL-004 error500 is status 500"
+                },
+                "FL-005 timeout is status 504": {
+                    "path": "::FL-005 timeout is status 504",
+                    "id": "847230af3b2f3eef347a9779ab15f510",
+                    "passes": 1,
+                    "fails": 0,
+                    "name": "FL-005 timeout is status 504"
+                },
+                "FL-006 wrong is status 400": {
+                    "path": "::FL-006 wrong is status 400",
+                    "id": "5d99f04a5f9069ca65075e5e7c7bb4c1",
+                    "passes": 1,
+                    "fails": 0,
+                    "name": "FL-006 wrong is status 400"
+                }
+            },
+        "name": ""
+    },
+    "metrics": {
+        "vus_max": {
+            "value": 1,
+            "min": 1,
+            "max": 1
+        },
+        "http_req_receiving": {
+            "med": 0,
+            "max": 0.5343,
+            "p(90)": 0.26715,
+            "p(95)": 0.400725,
+            "avg": 0.08905,
+            "min": 0
+        },
+        "http_req_failed": {
+            "passes": 3,
+            "fails": 3,
+            "value": 0.5
+        },
+        "http_req_duration": {
+            "p(95)": 4503.2807250000005,
+            "avg": 1503.118316666667,
+            "min": 2.2342,
+            "med": 503.1446,
+            "max": 5003.0157,
+            "p(90)": 4003.54575
+        },
+        "http_req_connecting": {
+            "p(90)": 0.53275,
+            "p(95)": 0.7991249999999999,
+            "avg": 0.17758333333333332,
+            "min": 0,
+            "med": 0,
+            "max": 1.0655
+        },
+        "http_req_sending": {
+            "avg": 0.09498333333333332,
+            "min": 0,
+            "med": 0,
+            "max": 0.5468,
+            "p(90)": 0.28495,
+            "p(95)": 0.415875
+        },
+        "checks": {
+            "passes": 6,
+            "fails": 0,
+            "value": 1
+        },
+        "vus": {
+            "value": 1,
+            "min": 1,
+            "max": 1
+        },
+        "http_reqs": {
+            "count": 6,
+            "rate": 0.5986017620601095
+        },
+        "http_req_waiting": {
+            "p(95)": 4503.27495,
+            "avg": 1502.9342833333337,
+            "min": 2.2342,
+            "med": 502.8134,
+            "max": 5003.0157,
+            "p(90)": 4003.5342
+        },
+        "iterations": {
+            "count": 1,
+            "rate": 0.0997669603433516
+        },
+        "data_sent": {
+            "rate": 61.65598149219129,
+            "count": 618
+        },
+        "iteration_duration": {
+            "avg": 10023.3584,
+            "min": 10023.3584,
+            "med": 10023.3584,
+            "max": 10023.3584,
+            "p(90)": 10023.3584,
+            "p(95)": 10023.3584
+        },
+        "http_req_duration{expected_response:true}": {
+            "avg": 2003.1016333333334,
+            "min": 3.7574,
+            "med": 1002.5318,
+            "max": 5003.0157,
+            "p(90)": 4202.91892,
+            "p(95)": 4602.96731
+        },
+        "data_received": {
+            "count": 1038,
+            "rate": 103.55810483639895
+        },
+        "http_req_blocked": {
+            "max": 1.6123,
+            "p(90)": 0.8121,
+            "p(95)": 1.2122,
+            "avg": 0.2707,
+            "min": 0,
+            "med": 0
+        },
+        "http_req_tls_handshaking": {
+            "min": 0,
+            "med": 0,
+            "max": 0,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0
+        }
+    }
+}

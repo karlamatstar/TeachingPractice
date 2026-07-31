@@ -1,0 +1,4 @@
+openai>=1.0.0
+python-dotenv
+streamlit
+PyQt5>=5.15.0

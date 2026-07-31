@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+openai
+python-dotenv
+pandas
+streamlit
+plotly
+prometheus-client
+pytest
+httpx
+python-docx

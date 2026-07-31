@@ -1,0 +1,9 @@
+﻿text,expected_label,test_type,predicted_label,is_correct
+손흥민 경기 결과,sports_agent,오타 및 짧은 표현,sports_agent,True
+손흥민 경긱 결과 알려줘,sports_agent,오타,sports_agent,True
+피자 주문하고 5분 타이머 맞춰줘,order_agent,복합 의도,timer_agent,False
+오늘 축구 몇 시에 해?,sports_agent,스포츠와 시간 혼합,sports_agent,True
+방탄소년단 신곡 틀어줘,general_chat,미지원 기능,general_chat,True
+ㅋㅋㅋㅋㅋㅋ,general_chat,의미 없는 입력,general_chat,True
+피자 주문 언제 도착해?,order_agent,주문 상태 확인,order_agent,True
+뉴욕 시간 알려주고 축구 결과도 알려줘,timer_agent,복합 의도,timer_agent,True

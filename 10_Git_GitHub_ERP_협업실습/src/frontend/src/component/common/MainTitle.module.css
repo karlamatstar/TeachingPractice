@@ -1,0 +1,127 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.titleArea {
+    display: flex;
+    flex-direction: column;
+}
+
+.mainTitle {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.desc {
+    font-size: 13px;
+    font-weight: 400;
+    color: #6B7280;
+}
+
+.buttonArea {
+    display: flex;
+    gap: 8px;
+}
+
+.modalHeader {
+    padding: 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.modalHeader button[data-slot="dialog-close"] {
+    background: #2D5F9E;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.closeBtn {
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.modalContent {
+    padding: 16px;
+    max-height: 70vh;
+    overflow-y: scroll;
+}
+
+
+.formSection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1B3A6B;
+    position: relative;
+    padding-left: 8px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+}
+
+.title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 3px;
+    height: 80%;
+    background: #1B3A6B;
+    border-radius: 8px;
+}
+
+.title::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background: #E5E7EB;
+}
+
+
+.formItem {
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+}
+
+.formSection.emergency {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.contentItem {
+    margin-top: 14px;
+}
+
+.postItem {
+    width: 100%;
+}
+
+.footerGuide {
+    font-size: 12px;
+    color: #9CA3AF;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+}
+
+.footerContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-content: center;
+    padding: 10px 20px;
+}
+
+.footerButtons {
+    display: flex;
+    gap: 8px;
+}

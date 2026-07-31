@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.tableAppointmentType span {
+    padding: 3px 10px;
+    border-radius: 8px;
+}
+
+.type1 {
+    background-color: #DCFCE7;
+    color: #16A34A;
+    font-size: 11px;
+    line-height: 13.2px;
+    font-weight: 700;
+}
+
+.type2 {
+    background-color: #FEF9C3;
+    color: #CA8A04;
+    font-size: 11px;
+    line-height: 13.2px;
+    font-weight: 700;
+}
+
+.type3 {
+    background-color: #EDE9FE;
+    color: #7C3AED;
+    font-size: 11px;
+    line-height: 13.2px;
+    font-weight: 700;
+
+}

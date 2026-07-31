@@ -1,0 +1,416 @@
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stagger > * {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.stagger > *:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.stagger > *:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.stagger > *:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.stagger > *:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+
+
+
+
+
+.container {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+}
+.loginContentWrapper {
+    display: flex;
+}
+
+.guideArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    background: linear-gradient(
+            to top right,
+            #0F2547,
+            #1E40AF
+    );
+
+    padding: 150px 0;
+}
+
+.guideTitle {
+    display: flex;
+    color: #93C5FD;
+    padding: 7px 16px;
+    background-color: #2c437d;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.guideCenterTitle {
+    font-size: 38px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.guideDesc {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    color: #BFDBFE;
+    margin-bottom: 20px;
+}
+
+
+.spec {
+    display: flex;
+    gap: 65px;
+}
+.specNumber {
+    font-size: 26px;
+    font-weight: 700;
+    color: #fff;
+}
+.spec li:not(:last-child)::after {
+    content: "";
+    width: 1px;
+    height: 44px;
+    background-color: #fff;
+    position: absolute;
+    right: -30px;
+    top: 10px
+}
+.spec li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.specDesc {
+    font-size: 12px;
+    font-weight: 400;
+    color:#93C5FD;
+}
+
+.centerTitleHL {
+    color: #60A5FA;
+}
+
+.functionList {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.functionList li{
+    width: 532px;
+    display: flex;
+    background-color: #FFFFFF12;
+    padding: 14px 18px ;
+    gap: 8px;
+    border: 1px solid #FFFFFF20;
+    border-radius: 10px;
+}
+.functionIcon {
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #FFFFFF15;
+}
+
+.functionDesc {
+    color: #BFDBFE;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.functionTitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.loginArea {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 113.5px 110px;
+}
+
+.titleSection{
+    margin-bottom: 28px;
+}
+.titleSection p {
+    font-size: 30px;
+    width: 400px;
+    font-weight: 700;
+}
+.titleSection span {
+    font-size: 15px;
+    font-weight: 400;
+    color: #6B7280;
+
+}
+
+.inputSection {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.inputItem label{
+    font-size: 13px;
+    font-weight: 500;
+    color: #374151;
+}
+.inputItem input{
+    border: 1px solid #D1D5DB;
+    width: 100%;
+    padding: 16.5px 44px;
+    border-radius: 10px;
+}
+.inputItem input::placeholder{
+    font-size: 14px;
+    font-weight: 400;
+
+}
+
+.inputItem {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.mail {
+    position: absolute;
+    bottom: 18px;
+    left: 12px;
+}
+
+.eye {
+    position: absolute;
+    bottom: 18px;
+    right: 12px;
+}
+
+
+.loginOptionSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    margin-bottom: 28px;
+    margin-top: 14px;
+}
+
+.loginOptionItem {
+    display: flex;
+    align-items: center;
+}
+.keepLoginTitle {
+    margin-left: 6px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #6B7280;
+}
+.findPw {
+    font-size: 13px;
+    font-weight: 500;
+    color: #2563EB;
+}
+
+.loginButtonSection {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 28px;
+}
+
+.loginButtonItem {
+    display: flex;
+    width: 400px;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #1E3A5F;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 16px;
+    gap: 8px;
+}
+
+.loginButtonOr {
+    position: relative;
+    display: flex;
+    width: 400px;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 400;
+    color: #9CA3AF;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.loginButtonOr::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 40%;
+    height: 1px;
+    background-color: #9CA3AF;
+}
+.loginButtonOr::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 40%;
+    height: 1px;
+    background-color: #9CA3AF;
+}
+
+
+.joinItem {
+    display: flex;
+    gap: 6px;
+}
+.noAccount {
+    font-size: 14px;
+    font-weight: 400;
+    color: #6B7280;
+}
+
+.applyJoin {
+    color: #2563EB;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.joinArea {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.joinFormSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 560px;
+    gap: 14px;
+}
+
+.joinFormSection div {
+    width: 273px;
+}
+
+.joinWrapper {
+    padding: 113.5px 110px;
+}
+
+
+.guideAndConsent {
+    display: flex;
+    margin-top: 14px;
+    margin-bottom: 24px;
+    flex-direction: column;
+
+}
+
+.guideContentWrapper {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+}
+
+.guideContent {
+    color: #9CA3AF;
+    font-size: 12px;
+
+}
+
+.consentWrapper {
+    display: flex;
+    justify-content: space-between;
+    background-color: #F9FAFB;
+    border: 1px solid #E5E7EB;
+    border-radius: 10px;
+    padding: 15px 16px;
+    margin-top: 24px;
+}
+.checkConsent {
+    color: #374151;
+    font-size: 13px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.consentClickButton {
+    color: #2563EB;
+    font-size: 13px;
+}
+
+
+.joinButtonSection {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.joinButton {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    background-color: #1E3A5F;
+    width: 100%;
+    border-radius: 10px;
+    padding: 16px 0;
+}
+
+.joinButton span {
+    font-size: 15px;
+    color: #fff;
+}
+
+.loginButton {
+    width: 100%;
+    color: #6B7280;
+    font-size: 14px;
+    justify-content: center;
+    display: flex;
+}
+
+.loginButton span {
+    color: #2563EB;
+    font-weight: 700;
+    margin-left: 6px;
+}

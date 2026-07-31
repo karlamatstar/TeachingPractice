@@ -1,0 +1,317 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #F1F5F9;
+    border-radius: 8px;
+}
+.titleSection {
+    display: flex;
+    justify-content: space-between;
+    padding: 15.5px 20px;
+    border-bottom: 1px solid #E5E7EB;
+    background-color: #F8FAFC;
+    border-radius: 8px 8px 0 0;
+}
+.titleSection span{
+    font-size: 14px;
+    font-weight: 700;
+    color: #1B3A6B;
+}
+
+.titleWrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.userStatusWrapper {
+    background-color: #EFF6FF;
+    border-radius: 999px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.userStatusList {
+    display: flex;
+    color: #2563EB;
+    font-size: 12px;
+    font-weight: 900;
+    gap: 10px;
+    padding: 5px 12px;
+}
+.userStatusList li {
+    position: relative;
+}
+.userStatusList li:not(:last-child)::after {
+    content: "";
+    width: 3px;
+    height: 3px;
+    border-radius: 10px;
+    background-color: #2563EB;
+    position: absolute;
+    top: 50%;
+    right: -6px;
+    transform: translateY(-50%);
+}
+
+.formSection {
+    background-color: #fff;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.tabs {
+    display: flex;
+    border-radius: 6px;
+    border: 1px solid #D1D5DB;
+    cursor: pointer;
+}
+
+.tabs li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    right: -1px;
+    background-color: #D1D5DB;
+    top: 0;
+}
+.tabs li.active {
+    background-color: #1B3A6B;
+    color: #fff;
+}
+.tabs li:nth-child(1) {
+    border-top-left-radius: 6px ;
+    border-bottom-left-radius: 6px ;
+}
+.tabs li {
+    position: relative;
+    color: #6B7280;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 900;
+}
+.triggerDateWrapper {
+    display: flex;
+    position: relative;
+}
+.calendar {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.appointmentDataItem {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.appointmentDataItem label {
+    font-size: 13px;
+    font-weight: 900;
+}
+.triggerDate {
+    font-size: 13px;
+    text-align: left;
+    width: 180px;
+    padding: 10px 0px 10px 12px;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+.appointmentDataWrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.appointmentNumber {
+    font-size: 13px;
+    display: flex;
+    width: 160px;
+    background-color: #F9FAFB;
+    color: #9CA3AF;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    padding: 10px 12px;
+}
+.appointmentPositionStatusWrapper {
+    margin-top: 16px;
+    display: flex;
+    gap: 12px;
+}
+
+
+.appointmentBefore {
+    display: flex;
+    width: 543px;
+    flex-direction: column;
+    border: 1px solid #FECACA;
+    background-color: #FFF7F7;
+    border-radius: 8px;
+    padding: 16px;
+    gap: 12px;
+}
+.beforeTop {
+    position: relative;
+}
+.beforeTop::after {
+    content: "";
+    width: calc(100% - 79px);
+    height: 1px;
+    background-color: #FECACA;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.beforeTop span{
+    color: #DC2626;
+    font-size: 12px;
+    font-weight: 700;
+    background-color: #FEE2E2;
+    padding: 4px 12px;
+    border-radius: 939px;
+}
+.beforeItem {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 6px;
+}
+.beforeItem label{
+    color: #6B7280;
+    font-size: 12px;
+    font-weight: 500;
+
+}
+.beforeItem input{
+    border: 1px solid #FECACA;
+    background-color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 0 10px 12px;
+    border-radius: 6px;
+    width: 162px;
+
+}
+
+.beforeContent {
+    display: flex;
+    gap: 12px;
+}
+.inputIcon {
+    position: absolute;
+    right: 10px;
+    top:67%;
+    transform: translateY(-50%);
+}
+
+.arrowWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.afterTop {
+    position: relative;
+}
+.afterTop::after {
+    content: "";
+    width: calc(100% - 79px);
+    height: 1px;
+    background-color: #BFDBFE;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.appointmentAfter {
+    display: flex;
+    width: 543px;
+    flex-direction: column;
+    border: 1px solid #BFDBFE;
+    background-color: #F0F7FF;
+    border-radius: 8px;
+    padding: 16px;
+    gap: 12px;
+}
+.afterTop span{
+    color: #1D4ED8;
+    font-size: 12px;
+    font-weight: 700;
+    background-color: #DBEAFE;
+    padding: 4px 12px;
+    border-radius: 939px;
+}
+.afterContent {
+    display: flex;
+    gap: 12px;
+}
+
+.afterItem {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.afterItem label{
+    color: #6B7280;
+    font-size: 12px;
+    font-weight: 500;
+
+}
+.afterItem input{
+    border: 1px solid #2563EB;
+    background-color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 0 10px 12px;
+    border-radius: 6px;
+    width: 162px;
+
+}
+
+.afterItem select {
+    color: #1D4ED8;
+    font-size: 13px;
+    font-weight: 900;
+    background-color: #fff;
+    padding: 10px 12px;
+    width: 162px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #2563EB;
+    border-radius: 6px;
+}
+
+.etcWrapper {
+    margin-top: 16px;
+}
+
+.etcTextArea {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.etcTextArea textarea {
+    width: 100%;
+    height: 60px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #D1D5DB;
+}
+
+.etcButtonWrapper {
+    margin-top: 16px;
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+}

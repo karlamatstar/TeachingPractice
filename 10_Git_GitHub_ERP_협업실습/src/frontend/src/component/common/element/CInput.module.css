@@ -1,0 +1,11 @@
+.cInput {
+    padding: 9px 0 9px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    border: 1px solid #D1D5DB;
+}
+
+.cInputReadonly {
+    background-color: #F9FAFB;;
+    cursor: pointer;
+}

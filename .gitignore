@@ -1,0 +1,78 @@
+# 이 저장소에서 공개하지 않는 루트 문서
+/_DOCS/
+
+# 환경변수와 인증정보
+.env
+.env.*
+!.env.example
+!**/.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+secrets*.json
+*secret*.json
+.streamlit/secrets.toml
+
+# Python 가상환경, 캐시, 테스트 부산물
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+.hypothesis/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Node.js 의존성과 빌드 결과
+node_modules/
+.npm/
+.yarn/
+.pnpm-store/
+.next/
+.nuxt/
+.vite/
+.parcel-cache/
+dist/
+build/
+coverage/
+
+# 실행 중 다시 생성되는 벡터 저장소
+**/chroma_db/
+**/chroma_store/
+
+# IDE 및 로컬 도구 설정
+.idea/
+.codex/
+
+# 로그, 임시·백업 파일
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+~$*.docx
+~$*.xlsx
+~$*.pptx
+*.asd
+*.wbk
+
+# 운영체제 생성 파일
+.DS_Store
+Thumbs.db
+Desktop.ini

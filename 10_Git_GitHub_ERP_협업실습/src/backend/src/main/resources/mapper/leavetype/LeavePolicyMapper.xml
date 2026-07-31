@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.logitics.erp.leavetype.mapper.LeaveTypeMapper">
+
+    <select id="getLeaveType">
+        SELECT * FROM leave_policy
+    </select>
+
+<!--    <insert id="addLeavePolicy">-->
+
+<!--        INSERT INFO leave_policy(-->
+<!--            discharge_type,-->
+<!--            enlistment_date,-->
+<!--            discharge_date,-->
+<!--            military_type,-->
+<!--            military_rank,-->
+<!--            exemption_reason-->
+<!--        )-->
+<!--        VALUES (-->
+<!--            #{dischargeType},-->
+<!--            #{enlistmentDate},-->
+<!--            #{militaryType},-->
+<!--            #{militaryRank},-->
+<!--            #{exemptionReason}-->
+<!--        )-->
+
+<!--    </insert>-->
+
+
+</mapper>

@@ -1,0 +1,41 @@
+﻿text,label
+손흥민 경기 결과 알려줘,sports_agent
+어제 축구 경기 누가 이겼어?,sports_agent
+야구 점수 알려줘,sports_agent
+한국 대표팀 경기 일정 알려줘,sports_agent
+농구 경기 결과 궁금해,sports_agent
+오늘 축구 몇 시에 해?,sports_agent
+김민재 선수 소속팀 알려줘,sports_agent
+월드컵 경기 일정 보여줘,sports_agent
+야구 순위 알려줘,sports_agent
+손흥민 골 넣었어?,sports_agent
+지금 몇 시야?,timer_agent
+현재 시간 알려줘,timer_agent
+5분 타이머 맞춰줘,timer_agent
+10분 후에 알려줘,timer_agent
+30분 알람 설정해줘,timer_agent
+서울 시간 알려줘,timer_agent
+뉴욕은 지금 몇 시야?,timer_agent
+1시간 타이머 해줘,timer_agent
+내일 아침 7시에 깨워줘,timer_agent
+회의 시작까지 몇 분 남았어?,timer_agent
+피자 주문하고 싶어,order_agent
+치킨 배달 가능한가요?,order_agent
+햄버거 주문해줘,order_agent
+짜장면 한 그릇 시켜줘,order_agent
+커피 주문하고 싶어요,order_agent
+배달 언제 와요?,order_agent
+주문 취소하고 싶어,order_agent
+결제가 안 돼요,order_agent
+내 주문 내역 보여줘,order_agent
+피자 두 판 주문해줘,order_agent
+안녕하세요,general_chat
+오늘 기분이 안 좋아,general_chat
+재미있는 이야기 해줘,general_chat
+인공지능이 뭐야?,general_chat
+고마워,general_chat
+오늘 날씨 좋네,general_chat
+점심 뭐 먹을까?,general_chat
+심심해,general_chat
+너는 누구야?,general_chat
+ㅎㅎㅎㅎ,general_chat

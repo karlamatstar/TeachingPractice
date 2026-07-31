@@ -1,0 +1,9 @@
+PyQt5
+python-dotenv
+langchain
+langchain-openai
+langchain-community
+langchain-chroma
+chromadb
+langchain-text-splitters
+pypdf

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.logitics.erp.employeeeventsupport.mapper.EmployeeEventSupportMapper">
+
+    <select id="getSupportList"
+    >
+        SELECT es.* FROM employee_event_support es
+            LEFT JOIN employee e
+                ON es.employee_id = e.employee_id
+        WHERE e.employee_id = #{employeeId}
+        <if test="keyword != '' and keyword != null">
+            AND (
+                e.name like concat('%', #{keyword}, '%')
+                or
+                e.employee_no like concat('%', #{keyword}, '%')
+            )
+        </if>
+
+        ORDER BY es.created_at DESC
+
+<!--        LIMIT #{size}-->
+<!--        OFFSET #{offset}-->
+    </select>
+
+    <insert
+        id="registerEventSupport"
+        keyProperty="employeeEventSupportId"
+        keyColumn="employeeEventSupportId"
+    >
+        INSERT INTO employee_event_support(
+            employee_id,
+            event_type,
+            family_relation,
+            target_name,
+            application_date,
+            event_date,
+            requested_amount,
+            event_location,
+            bank_name,
+            account_number,
+            account_holder,
+            approval_status,
+            memo
+        )
+        VALUES (
+            #{employeeId},
+            #{eventType},
+            #{familyRelation},
+            #{targetName},
+            #{applicationDate},
+            #{eventDate},
+            #{requestedAmount},
+            #{eventLocation},
+            #{bankName},
+            #{accountNumber},
+            #{accountHolder},
+            #{approvalStatus},
+            #{memo}
+        )
+    </insert>
+
+
+    <update id="deleteEventSupport">
+        UPDATE employee_event_support ees
+            SET ees.deleted = true
+            WHERE ec.employee_event_support = #{eventSupportId}
+    </update>
+
+    <update id="updateFileRefId">
+        UPDATE file_attachment fa
+        SET fa.ref_id = #{eventSupportId}
+        where fa.file_id = #{fileId}
+    </update>
+
+
+    <select
+        id="getEventSupportDetail"
+    >
+        select
+            ees.*,
+            fa.original_name as savedFileName,
+            fa.extension as savedFileExt,
+            fa.file_id as savedFileId,
+            fa.created_at as savedFileDate,
+            fa.file_size as savedFileSize,
+        from employee_event_support ees
+            left join file_attachment fa
+            on ees.employee_event_support_id = fa.ref_id
+
+        where ees.employee_event_support_id  = #{eventSupportId}
+    </select>
+</mapper>

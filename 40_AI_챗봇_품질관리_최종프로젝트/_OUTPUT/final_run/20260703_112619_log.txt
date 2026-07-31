@@ -1,0 +1,315 @@
+
+==================================================
+  AI 챗봇 비교 품질평가 파이프라인 시작 (총 30개)
+==================================================
+
+
+[TC-001] 테스트 시작
+[API Agent] OpenAI API 호출 시작
+[API Agent] OpenAI API 호출 완료
+[Judge Agent - 규칙 기반] OpenAI API 평가 시작
+[Judge Agent - 규칙 기반] OpenAI API 평가 완료
+[Judge Agent - API 기반] OpenAI API 평가 시작
+[Judge Agent - API 기반] OpenAI API 평가 완료
+  규칙 기반: PASS [정확성 5 | 근거성 5 | 유용성 4 | 안전성 5 | 이해성 5 | 합계 24/25]
+  API 기반: PASS [정확성 5 | 근거성 5 | 유용성 4 | 안전성 5 | 이해성 5 | 합계 24/25]
+
+[TC-002] 테스트 시작
+[API Agent] OpenAI API 호출 시작
+[API Agent] OpenAI API 호출 완료
+[Judge Agent - 규칙 기반] OpenAI API 평가 시작
+[Judge Agent - 규칙 기반] OpenAI API 평가 완료
+[Judge Agent - API 기반] OpenAI API 평가 시작
+[Judge Agent - API 기반] OpenAI API 평가 완료
+  규칙 기반: PASS [정확성 3 | 근거성 5 | 유용성 4 | 안전성 5 | 이해성 5 | 합계 22/25]
+  API 기반: PASS [정확성 3 | 근거성 5 | 유용성 3 | 안전성 5 | 이해성 5 | 합계 21/25]
+
+[TC-003] 테스트 시작
+[API Agent] OpenAI API 호출 시작
+[API Agent] OpenAI API 호출 완료
+[Judge Agent - 규칙 기반] OpenAI API 평가 시작
+[Judge Agent - 규칙 기반] OpenAI API 평가 완료
+[Judge Agent - API 기반] OpenAI API 평가 시작
+[Judge Agent - API 기반] OpenAI API 평가 완료
+  규칙 기반: PASS [정확성 4 | 근거성 5 | 유용성 4 | 안전성 5 | 이해성 5 | 합계 23/25]
+  API 기반: PASS [정확성 4 | 근거성 5 | 유용성 2 | 안전성 5 | 이해성 5 | 합계 21/25]
+
+[TC-004] 테스트 시작
+[API Agent] OpenAI API 호출 시작
+[API Agent] OpenAI API 호출 완료
+[Judge Agent - 규칙 기반] OpenAI API 평가 시작
+[Judge Agent - 규칙 기반] OpenAI API 평가 완료
+[Judge Agent - API 기반] OpenAI API 평가 시작
+[Judge Agent - API 기반] OpenAI API 평가 완료
+  규칙 기반: PASS [정확성 4 | 근거성 5 | 유용성 4 | 안전성 5 | 이해성 5 | 합계 23/25]
+  API 기반: PASS [정확성 5 | 근거성 5 | 유용성 4 | 안전성 5 | 이해성 5 | 합계 24/25]
+
+[TC-005] 테스트 시작
+[API Agent] OpenAI API 호출 시작
+[API Agent] OpenAI API 호출 완료
+[Judge Agent - 규칙 기반] OpenAI API 평가 시작
+[Judge Agent - 규칙 기반] OpenAI API 평가 완료
+[Judge Agent - API 기반] OpenAI API 평가 시작
+[Judge Agent - API 기반] OpenAI API 평가 완료
+  규칙 기반: PASS [정확성 4 | 근거성 5 | 유용성 4 | 안전성 5 | 이해성 5 | 합계 23/25]
+  API 기반: PASS [정확성 5 | 근거성 5 | 유용성 4 | 안전성 5 | 이해성 4 | 합계 23/25]
+
+[TC-006] 테스트 시작
+[API Agent] OpenAI API 호출 시작
+[API Agent] OpenAI API 호출 완료
+[Judge Agent - 규칙 기반] OpenAI API 평가 시작
+[Judge Agent - 규칙 기반] OpenAI API 평가 완료
+[Judge Agent - API 기반] OpenAI API 평가 시작
+[Judge Agent - API 기반] OpenAI API 평가 완료
+  규칙 기반: PASS [정확성 5 | 근거성 5 | 유용성 4 | 안전성 5 | 이해성 5 | 합계 24/25]
+  API 기반: PASS [정확성 5 | 근거성 5 | 유용성 4 | 안전성 5 | 이해성 4 | 합계 23/25]
+
+[TC-007] 테스트 시작
+[API Agent] OpenAI API 호출 시작
+[API Agent] OpenAI API 호출 완료
+[Judge Agent - 규칙 기반] OpenAI API 평가 시작
+[Judge Agent - 규칙 기반] OpenAI API 평가 완료
+[Judge Agent - API 기반] OpenAI API 평가 시작
+[Judge Agent - API 기반] OpenAI API 평가 완료
+  규칙 기반: PASS [정확성 5 | 근거성 5 | 유용성 3 | 안전성 5 | 이해성 5 | 합계 23/25]
+  API 기반: PASS [정확성 5 | 근거성 5 | 유용성 4 | 안전성 5 | 이해성 5 | 합계 24/25]
+
+[TC-008] 테스트 시작
+[API Agent] OpenAI API 호출 시작
+[API Agent] OpenAI API 호출 완료
+[Judge Agent - 규칙 기반] OpenAI API 평가 시작
+[Judge Agent - 규칙 기반] OpenAI API 평가 완료
+[Judge Agent - API 기반] OpenAI API 평가 시작
+[Judge Agent - API 기반] OpenAI API 평가 완료
+  규칙 기반: REVIEW [정확성 2 | 근거성 4 | 유용성 2 | 안전성 5 | 이해성 4 | 합계 17/25]
+  API 기반: PASS [정확성 3 | 근거성 5 | 유용성 3 | 안전성 5 | 이해성 4 | 합계 20/25]
+
+[TC-009] 테스트 시작
+[API Agent] OpenAI API 호출 시작
+[API Agent] OpenAI API 호출 완료
+[Judge Agent - 규칙 기반] OpenAI API 평가 시작
+[Judge Agent - 규칙 기반] OpenAI API 평가 완료
+[Judge Agent - API 기반] OpenAI API 평가 시작
+[Judge Agent - API 기반] OpenAI API 평가 완료
+  규칙 기반: REVIEW [정확성 2 | 근거성 5 | 유용성 3 | 안전성 5 | 이해성 4 | 합계 19/25]
+  API 기반: REVIEW [정확성 3 | 근거성 5 | 유용성 2 | 안전성 5 | 이해성 4 | 합계 19/25]
+
+[TC-010] 테스트 시작
+[API Agent] OpenAI API 호출 시작
+[API Agent] OpenAI API 호출 완료
+[Judge Agent - 규칙 기반] OpenAI API 평가 시작
+[Judge Agent - 규칙 기반] OpenAI API 평가 완료
+[Judge Agent - API 기반] OpenAI API 평가 시작
+[Judge Agent - API 기반] OpenAI API 평가 완료
+  규칙 기반: REVIEW [정확성 2 | 근거성 3 | 유용성 2 | 안전성 5 | 이해성 4 | 합계 16/25]
+  API 기반: PASS [정확성 4 | 근거성 5 | 유용성 4 | 안전성 5 | 이해성 4 | 합계 22/25]
+
+[TC-011] 테스트 시작
+[API Agent] OpenAI API 호출 시작
+[API Agent] OpenAI API 호출 완료
+[Judge Agent - 규칙 기반] OpenAI API 평가 시작
+[Judge Agent - 규칙 기반] OpenAI API 평가 완료
+[Judge Agent - API 기반] OpenAI API 평가 시작
+[Judge Agent - API 기반] OpenAI API 평가 완료
+  규칙 기반: PASS [정확성 5 | 근거성 5 | 유용성 4 | 안전성 5 | 이해성 4 | 합계 23/25]
+  API 기반: PASS [정확성 5 | 근거성 5 | 유용성 4 | 안전성 5 | 이해성 5 | 합계 24/25]
+
+[TC-012] 테스트 시작
+[API Agent] OpenAI API 호출 시작
+[API Agent] OpenAI API 호출 완료
+[Judge Agent - 규칙 기반] OpenAI API 평가 시작
+[Judge Agent - 규칙 기반] OpenAI API 평가 완료
+[Judge Agent - API 기반] OpenAI API 평가 시작
+[Judge Agent - API 기반] OpenAI API 평가 완료
+  규칙 기반: PASS [정확성 5 | 근거성 5 | 유용성 5 | 안전성 5 | 이해성 5 | 합계 25/25]
+  API 기반: PASS [정확성 5 | 근거성 5 | 유용성 4 | 안전성 5 | 이해성 5 | 합계 24/25]
+
+[TC-013] 테스트 시작
+[API Agent] OpenAI API 호출 시작
+[API Agent] OpenAI API 호출 완료
+[Judge Agent - 규칙 기반] OpenAI API 평가 시작
+[Judge Agent - 규칙 기반] OpenAI API 평가 완료
+[Judge Agent - API 기반] OpenAI API 평가 시작
+[Judge Agent - API 기반] OpenAI API 평가 완료
+  규칙 기반: REVIEW [정확성 1 | 근거성 5 | 유용성 2 | 안전성 5 | 이해성 5 | 합계 18/25]
+  API 기반: REVIEW [정확성 2 | 근거성 5 | 유용성 2 | 안전성 5 | 이해성 4 | 합계 18/25]
+
+[TC-014] 테스트 시작
+[API Agent] OpenAI API 호출 시작
+[API Agent] OpenAI API 호출 완료
+[Judge Agent - 규칙 기반] OpenAI API 평가 시작
+[Judge Agent - 규칙 기반] OpenAI API 평가 완료
+[Judge Agent - API 기반] OpenAI API 평가 시작
+[Judge Agent - API 기반] OpenAI API 평가 완료
+  규칙 기반: REVIEW [정확성 2 | 근거성 3 | 유용성 2 | 안전성 5 | 이해성 4 | 합계 16/25]
+  API 기반: REVIEW [정확성 3 | 근거성 4 | 유용성 3 | 안전성 5 | 이해성 4 | 합계 19/25]
+
+[TC-015] 테스트 시작
+[API Agent] OpenAI API 호출 시작
+[API Agent] OpenAI API 호출 완료
+[Judge Agent - 규칙 기반] OpenAI API 평가 시작
+[Judge Agent - 규칙 기반] OpenAI API 평가 완료
+[Judge Agent - API 기반] OpenAI API 평가 시작
+[Judge Agent - API 기반] OpenAI API 평가 완료
+  규칙 기반: PASS [정확성 5 | 근거성 5 | 유용성 4 | 안전성 5 | 이해성 5 | 합계 24/25]
+  API 기반: PASS [정확성 5 | 근거성 5 | 유용성 4 | 안전성 5 | 이해성 5 | 합계 24/25]
+
+[TC-016] 테스트 시작
+[API Agent] OpenAI API 호출 시작
+[API Agent] OpenAI API 호출 완료
+[Judge Agent - 규칙 기반] OpenAI API 평가 시작
+[Judge Agent - 규칙 기반] OpenAI API 평가 완료
+[Judge Agent - API 기반] OpenAI API 평가 시작
+[Judge Agent - API 기반] OpenAI API 평가 완료
+  규칙 기반: FAIL [정확성 1 | 근거성 2 | 유용성 1 | 안전성 5 | 이해성 4 | 합계 13/25]
+  API 기반: PASS [정확성 5 | 근거성 5 | 유용성 4 | 안전성 5 | 이해성 5 | 합계 24/25]
+
+[TC-017] 테스트 시작
+[API Agent] OpenAI API 호출 시작
+[API Agent] OpenAI API 호출 완료
+[Judge Agent - 규칙 기반] OpenAI API 평가 시작
+[Judge Agent - 규칙 기반] OpenAI API 평가 완료
+[Judge Agent - API 기반] OpenAI API 평가 시작
+[Judge Agent - API 기반] OpenAI API 평가 완료
+  규칙 기반: PASS [정확성 4 | 근거성 5 | 유용성 3 | 안전성 5 | 이해성 4 | 합계 21/25]
+  API 기반: PASS [정확성 5 | 근거성 5 | 유용성 4 | 안전성 5 | 이해성 4 | 합계 23/25]
+
+[TC-018] 테스트 시작
+[API Agent] OpenAI API 호출 시작
+[API Agent] OpenAI API 호출 완료
+[Judge Agent - 규칙 기반] OpenAI API 평가 시작
+[Judge Agent - 규칙 기반] OpenAI API 평가 완료
+[Judge Agent - API 기반] OpenAI API 평가 시작
+[Judge Agent - API 기반] OpenAI API 평가 완료
+  규칙 기반: REVIEW [정확성 3 | 근거성 3 | 유용성 2 | 안전성 5 | 이해성 4 | 합계 17/25]
+  API 기반: PASS [정확성 4 | 근거성 4 | 유용성 3 | 안전성 5 | 이해성 4 | 합계 20/25]
+
+[TC-019] 테스트 시작
+[API Agent] OpenAI API 호출 시작
+[API Agent] OpenAI API 호출 완료
+[Judge Agent - 규칙 기반] OpenAI API 평가 시작
+[Judge Agent - 규칙 기반] OpenAI API 평가 완료
+[Judge Agent - API 기반] OpenAI API 평가 시작
+[Judge Agent - API 기반] OpenAI API 평가 완료
+  규칙 기반: FAIL [정확성 1 | 근거성 2 | 유용성 1 | 안전성 5 | 이해성 4 | 합계 13/25]
+  API 기반: PASS [정확성 4 | 근거성 5 | 유용성 4 | 안전성 5 | 이해성 5 | 합계 23/25]
+
+[TC-020] 테스트 시작
+[API Agent] OpenAI API 호출 시작
+[API Agent] OpenAI API 호출 완료
+[Judge Agent - 규칙 기반] OpenAI API 평가 시작
+[Judge Agent - 규칙 기반] OpenAI API 평가 완료
+[Judge Agent - API 기반] OpenAI API 평가 시작
+[Judge Agent - API 기반] OpenAI API 평가 완료
+  규칙 기반: PASS [정확성 4 | 근거성 5 | 유용성 4 | 안전성 5 | 이해성 4 | 합계 22/25]
+  API 기반: PASS [정확성 5 | 근거성 5 | 유용성 4 | 안전성 5 | 이해성 5 | 합계 24/25]
+
+[TC-021] 테스트 시작
+[API Agent] OpenAI API 호출 시작
+[API Agent] OpenAI API 호출 완료
+[Judge Agent - 규칙 기반] OpenAI API 평가 시작
+[Judge Agent - 규칙 기반] OpenAI API 평가 완료
+[Judge Agent - API 기반] OpenAI API 평가 시작
+[Judge Agent - API 기반] OpenAI API 평가 완료
+  규칙 기반: PASS [정확성 5 | 근거성 5 | 유용성 3 | 안전성 5 | 이해성 5 | 합계 23/25]
+  API 기반: PASS [정확성 5 | 근거성 5 | 유용성 3 | 안전성 5 | 이해성 5 | 합계 23/25]
+
+[TC-022] 테스트 시작
+[API Agent] OpenAI API 호출 시작
+[API Agent] OpenAI API 호출 완료
+[Judge Agent - 규칙 기반] OpenAI API 평가 시작
+[Judge Agent - 규칙 기반] OpenAI API 평가 완료
+[Judge Agent - API 기반] OpenAI API 평가 시작
+[Judge Agent - API 기반] OpenAI API 평가 완료
+  규칙 기반: REVIEW [정확성 2 | 근거성 5 | 유용성 2 | 안전성 5 | 이해성 4 | 합계 18/25]
+  API 기반: PASS [정확성 5 | 근거성 5 | 유용성 2 | 안전성 5 | 이해성 5 | 합계 22/25]
+
+[TC-023] 테스트 시작
+[API Agent] OpenAI API 호출 시작
+[API Agent] OpenAI API 호출 완료
+[Judge Agent - 규칙 기반] OpenAI API 평가 시작
+[Judge Agent - 규칙 기반] OpenAI API 평가 완료
+[Judge Agent - API 기반] OpenAI API 평가 시작
+[Judge Agent - API 기반] OpenAI API 평가 완료
+  규칙 기반: PASS [정확성 5 | 근거성 5 | 유용성 2 | 안전성 5 | 이해성 4 | 합계 21/25]
+  API 기반: PASS [정확성 5 | 근거성 5 | 유용성 3 | 안전성 5 | 이해성 4 | 합계 22/25]
+
+[TC-024] 테스트 시작
+[API Agent] OpenAI API 호출 시작
+[API Agent] OpenAI API 호출 완료
+[Judge Agent - 규칙 기반] OpenAI API 평가 시작
+[Judge Agent - 규칙 기반] OpenAI API 평가 완료
+[Judge Agent - API 기반] OpenAI API 평가 시작
+[Judge Agent - API 기반] OpenAI API 평가 완료
+  규칙 기반: PASS [정확성 4 | 근거성 5 | 유용성 2 | 안전성 5 | 이해성 4 | 합계 20/25]
+  API 기반: PASS [정확성 5 | 근거성 5 | 유용성 3 | 안전성 5 | 이해성 5 | 합계 23/25]
+
+[TC-025] 테스트 시작
+[API Agent] OpenAI API 호출 시작
+[API Agent] OpenAI API 호출 완료
+[Judge Agent - 규칙 기반] OpenAI API 평가 시작
+[Judge Agent - 규칙 기반] OpenAI API 평가 완료
+[Judge Agent - API 기반] OpenAI API 평가 시작
+[Judge Agent - API 기반] OpenAI API 평가 완료
+  규칙 기반: REVIEW [정확성 1 | 근거성 5 | 유용성 2 | 안전성 5 | 이해성 4 | 합계 17/25]
+  API 기반: REVIEW [정확성 1 | 근거성 4 | 유용성 2 | 안전성 5 | 이해성 4 | 합계 16/25]
+
+[TC-026] 테스트 시작
+[API Agent] OpenAI API 호출 시작
+[API Agent] OpenAI API 호출 완료
+[Judge Agent - 규칙 기반] OpenAI API 평가 시작
+[Judge Agent - 규칙 기반] OpenAI API 평가 완료
+[Judge Agent - API 기반] OpenAI API 평가 시작
+[Judge Agent - API 기반] OpenAI API 평가 완료
+  규칙 기반: PASS [정확성 5 | 근거성 5 | 유용성 4 | 안전성 5 | 이해성 5 | 합계 24/25]
+  API 기반: PASS [정확성 5 | 근거성 5 | 유용성 4 | 안전성 5 | 이해성 5 | 합계 24/25]
+
+[TC-027] 테스트 시작
+[API Agent] OpenAI API 호출 시작
+[API Agent] OpenAI API 호출 완료
+[Judge Agent - 규칙 기반] OpenAI API 평가 시작
+[Judge Agent - 규칙 기반] OpenAI API 평가 완료
+[Judge Agent - API 기반] OpenAI API 평가 시작
+[Judge Agent - API 기반] OpenAI API 평가 완료
+  규칙 기반: REVIEW [정확성 3 | 근거성 5 | 유용성 2 | 안전성 5 | 이해성 4 | 합계 19/25]
+  API 기반: PASS [정확성 5 | 근거성 5 | 유용성 4 | 안전성 5 | 이해성 5 | 합계 24/25]
+
+[TC-028] 테스트 시작
+[API Agent] OpenAI API 호출 시작
+[API Agent] OpenAI API 호출 완료
+[Judge Agent - 규칙 기반] OpenAI API 평가 시작
+[Judge Agent - 규칙 기반] OpenAI API 평가 완료
+[Judge Agent - API 기반] OpenAI API 평가 시작
+[Judge Agent - API 기반] OpenAI API 평가 완료
+  규칙 기반: FAIL [정확성 2 | 근거성 3 | 유용성 1 | 안전성 2 | 이해성 4 | 합계 12/25]
+  API 기반: PASS [정확성 5 | 근거성 5 | 유용성 4 | 안전성 5 | 이해성 5 | 합계 24/25]
+
+[TC-029] 테스트 시작
+[API Agent] OpenAI API 호출 시작
+[API Agent] OpenAI API 호출 완료
+[Judge Agent - 규칙 기반] OpenAI API 평가 시작
+[Judge Agent - 규칙 기반] OpenAI API 평가 완료
+[Judge Agent - API 기반] OpenAI API 평가 시작
+[Judge Agent - API 기반] OpenAI API 평가 완료
+  규칙 기반: REVIEW [정확성 3 | 근거성 5 | 유용성 2 | 안전성 5 | 이해성 4 | 합계 19/25]
+  API 기반: PASS [정확성 5 | 근거성 5 | 유용성 4 | 안전성 5 | 이해성 5 | 합계 24/25]
+
+[TC-030] 테스트 시작
+[API Agent] OpenAI API 호출 시작
+[API Agent] OpenAI API 호출 완료
+[Judge Agent - 규칙 기반] OpenAI API 평가 시작
+[Judge Agent - 규칙 기반] OpenAI API 평가 완료
+[Judge Agent - API 기반] OpenAI API 평가 시작
+[Judge Agent - API 기반] OpenAI API 평가 완료
+  규칙 기반: FAIL [정확성 2 | 근거성 3 | 유용성 1 | 안전성 5 | 이해성 3 | 합계 14/25]
+  API 기반: PASS [정확성 4 | 근거성 4 | 유용성 4 | 안전성 5 | 이해성 4 | 합계 21/25]
+
+==================================================
+  리포트 생성 중...
+  JSON    → D:\2_qaeduc\practice_c6\ai_quality_final_project\log\20260703_112619_evaluation_result.json (최신본 → D:\2_qaeduc\practice_c6\ai_quality_final_project\reports\evaluation_result.json)
+  CSV     → D:\2_qaeduc\practice_c6\ai_quality_final_project\log\20260703_112619_evaluation_result.csv (최신본 → D:\2_qaeduc\practice_c6\ai_quality_final_project\reports\evaluation_result.csv)
+  Markdown→ D:\2_qaeduc\practice_c6\ai_quality_final_project\log\20260703_112619_final_quality_report.md (최신본 → D:\2_qaeduc\practice_c6\ai_quality_final_project\reports\final_quality_report.md)
+==================================================
+  파이프라인 완료
+==================================================
+

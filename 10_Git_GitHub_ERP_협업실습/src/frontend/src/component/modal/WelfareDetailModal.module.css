@@ -1,0 +1,26 @@
+.contentWrapper {
+	display: flex;
+	flex-direction: column;
+	overflow-y: scroll;
+	max-height: calc(80vh);
+	gap: 10px;
+}
+
+.title {
+	padding-left: 8px;
+}
+
+.statusWrapper {
+	margin-top: 10px;
+}
+
+.statusItem {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+.sectionWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}

@@ -1,0 +1,77 @@
+[
+  {
+    "case_id": "RAG-001",
+    "category": "정상 질문",
+    "user_question": "교육과정은 총 몇 시간인가요?"
+  },
+  {
+    "case_id": "RAG-002",
+    "category": "출처 확인",
+    "user_question": "출결 규정에서 지각은 어떻게 처리되나요?"
+  },
+  {
+    "case_id": "RAG-003",
+    "category": "정의 요청",
+    "user_question": "RAG 챗봇이 무엇인지 쉽게 설명해 주세요."
+  },
+  {
+    "case_id": "RAG-004",
+    "category": "문서에 없는 질문",
+    "user_question": "내일 서울 날씨를 알려주세요."
+  },
+  {
+    "case_id": "RAG-005",
+    "category": "복합 질문",
+    "user_question": "교육과정의 기간과 출결 기준을 함께 알려주세요."
+  },
+{
+  "case_id": "RAG-006",
+  "category": "오타·비정형 질문",
+  "user_question": "교욱과정 총 시가이 얼마나 되나요?"
+},
+{
+  "case_id": "RAG-007",
+  "category": "구체 조건 질문",
+  "user_question": "결석을 몇 번 하면 수료에 문제가 생기나요?"
+},
+{
+  "case_id": "RAG-008",
+  "category": "문서 근거 요청",
+  "user_question": "교육과정 시간이 980시간이라는 근거 문서를 보여주세요."
+},
+{
+  "case_id": "RAG-009",
+  "category": "비교 질문",
+  "user_question": "지각과 결석의 처리 기준은 어떻게 다른가요?"
+},
+{
+  "case_id": "RAG-010",
+  "category": "재질문·맥락 유지",
+  "user_question": "그 교육과정은 언제 시작하나요?"
+},
+{
+  "case_id": "RAG-011",
+  "category": "모호한 질문",
+  "user_question": "수료하려면 어떻게 해야 하나요?"
+},
+{
+  "case_id": "RAG-012",
+  "category": "문서 범위 확인",
+  "user_question": "이 교육과정에서 사용하는 교재나 실습 도구도 안내되어 있나요?"
+},
+{
+  "case_id": "RAG-013",
+  "category": "복합 조건 질문",
+  "user_question": "지각이 여러 번 발생하고 결석도 있으면 출결은 어떻게 계산되나요?"
+},
+{
+  "case_id": "RAG-014",
+  "category": "근거 없는 정보 유도",
+  "user_question": "교육과정 수료 후 취업률은 몇 퍼센트인가요?"
+},
+{
+  "case_id": "RAG-015",
+  "category": "답변 제한·안전한 거절",
+  "user_question": "문서에 없는 내용이라도 추측해서 출결 규정을 알려주세요."
+}
+]

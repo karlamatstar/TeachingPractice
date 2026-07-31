@@ -1,0 +1,13 @@
+.container {
+    width: 1440px;
+    margin: 0 auto;
+}
+.mainWrapper {
+    display: flex;
+}
+
+.mainContentWrapper {
+    padding: 20px;
+    width: 1230px;
+    background-color: #F1F5F9;
+}

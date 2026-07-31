@@ -1,0 +1,16 @@
+Issue ID,Summary,Issue Type,Priority,Description,Epic Link
+C6-001,knowledge_base.py 문자열 → 딕셔너리 구조 리팩토링,Task,Medium,"기존 KNOWLEDGE 문자열을 COURSE_KNOWLEDGE 딕셔너리로 변경 | 키 항목: course_name / total_hours / attendance_rule / completion_rule / project_rule / support_rule / schedule_rule | service_agent와 rule_based_agent에서 항목별 직접 참조 가능하도록 구조화",AJ-86
+C6-002,rule_based_agent.py 신규 구현,Task,High,"키워드 매칭 기반 규칙 챗봇 구현 | 교육시간 / 지각 / 수료 / 취업 / 복합 질문 / 날씨 / 위험 요청 패턴별 응답 처리 | knowledge_base 딕셔너리 참조하여 답변 생성 | get_answer_from_rule_based_agent() 함수 구현",AJ-86
+C6-003,service_agent.py Responses API 전환,Task,High,"chat.completions.create → client.responses.create (Responses API) 로 변경 | 함수명 get_answer() → get_answer_from_api_agent() 변경 | knowledge_base 딕셔너리 항목별로 시스템 프롬프트 구성 | 답변 원칙 5개 항목 명시 (추측 금지 / 범위 외 안내 / 위험 거절 / 한국어 / 2~5문장)",AJ-86
+C6-004,rule_validator.py 함수 개선,Task,Medium,"함수명 validate() → validate_by_rules() 변경 | user_question 파라미터 추가 | 키워드 비교 시 .lower() 적용하여 대소문자 무관 매칭 처리",AJ-86
+C6-005,judge_agent.py expected_policy 파라미터 추가 및 Responses API 전환,Task,High,"evaluate() → get_evaluation_from_openai() 함수명 변경 | expected_policy 파라미터 추가하여 기대 정책 기반 채점 가능 | client.responses.create 방식으로 전환 | 프롬프트에 기대 정책 항목 반영",AJ-86
+C6-006,config.py validate_config() 추가 및 모델 변경,Task,Medium,"validate_config() 함수 추가 — API Key 누락 시 명확한 오류 메시지 출력 | 모델명 gpt-4o-mini → gpt-4.1-mini 로 변경 | .env 참조 경로를 프로젝트 내부 BASE_DIR / .env 로 변경",AJ-86
+C6-007,report_generator.py 이중 Agent 비교 구조로 전면 재작성,Task,High,"단일 Agent 결과 구조 → rule_based / api_based 두 결과를 함께 처리하는 구조로 변경 | save_json_report() / save_csv_report() / save_markdown_report() 함수 분리 | CSV에 model_type 컬럼 추가하여 규칙/API 구분 | pandas DataFrame 활용으로 CSV 저장 방식 변경 | get_rule_status() 헬퍼 함수 추가 — 다양한 rule_validation 형식 안전 처리 | Markdown 보고서에 규칙 기반 vs API 기반 비교 섹션 구성",AJ-86
+C6-008,main.py 이중 Agent 실행 및 오류 처리 추가,Task,High,"rule_based_agent와 service_agent 동시 실행하여 두 답변 수집 | validate_config() 호출로 실행 전 환경 점검 | create_error_evaluation() 함수 추가 — Judge API 호출 실패 시 FAIL 처리 후 파이프라인 중단 없이 계속 진행 | evaluate_answer() 함수로 rule_validation + AI 채점 로직 모듈화 | generate_all()에 REPORTS_DIR 경로 인자 전달",AJ-86
+C6-009,dashboard 챗봇 선택 필터 추가,Task,Medium,"selectbox로 전체 / 규칙 기반 챗봇 / API 기반 챗봇 선택 가능 | 선택한 model_type 기준으로 DataFrame 필터링",AJ-86
+C6-010,dashboard HTML 커스텀 바차트 구현,Task,Medium,"기존 st.bar_chart → streamlit.components.v1 HTML 커스텀 차트로 교체 | 5점 만점 점수를 100점 환산하여 표시 | 점수 구간별 색상 적용 (빨강/주황/노랑/초록) | 색상 범례 안내 텍스트 추가",AJ-86
+C6-011,dashboard FAIL 및 REVIEW 사례 별도 표시,Task,Low,"전체 결과 표 하단에 FAIL 또는 REVIEW 사례만 필터링하여 별도 표시 | 문제 없는 경우 '현재 FAIL 또는 REVIEW 사례가 없습니다' 성공 메시지 출력",AJ-86
+C6-012,판정 현황 카드 UI 개선,Task,Low,"st.metric → HTML 커스텀 카드 컴포넌트로 교체 | FAIL(빨강) / REVIEW(주황) / 전체(노랑) / PASS(초록) 색상 카드로 시각적 강조",AJ-86
+C6-013,Rule 기반 vs API 기반 비교 End-to-End 실행 테스트,Task,High,"python main.py 실행 후 7개 케이스에 대해 두 Agent 답변 모두 정상 생성 확인 | rule_based와 api_based 각각 Judge 채점 완료 확인 | reports/ 폴더에 JSON / CSV / Markdown 3종 정상 저장 확인",AJ-86
+C6-014,비교 보고서 결과 검토,Task,Medium,"final_quality_report.md 열어 규칙 기반 vs API 기반 판정 비교 확인 | 두 챗봇 간 점수 차이 및 판정 차이 사례 식별 | 예상과 다른 결과 있으면 버그 또는 요청사항으로 등록",AJ-86
+C6-015,대시보드 비교 뷰 최종 확인,Task,Low,"streamlit run 실행 후 챗봇 선택 필터 동작 확인 | 전체 / 규칙 기반 / API 기반 선택 시 지표 및 차트 정상 변경 확인 | FAIL·REVIEW 사례 표 정상 렌더링 확인",AJ-86

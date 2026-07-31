@@ -1,0 +1,4 @@
+﻿case_id,answer_name,score,verdict,reason
+VOC-001,답변 A,28,FAIL,개선안이 추상적이거나 원인 대응 및 측정지표가 부족함
+VOC-001,답변 B,100,PASS,불만 원인과 개선안이 연결되고 실행 및 검증이 가능함
+VOC-001,답변 C,60,FAIL,개선안이 추상적이거나 원인 대응 및 측정지표가 부족함

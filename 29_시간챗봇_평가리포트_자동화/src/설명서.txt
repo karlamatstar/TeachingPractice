@@ -1,0 +1,22 @@
+.env를 현재 폴더에 추가한 뒤 실행
+
+ - 실행 방법
+run_tests.bat 파일 실행
+실행 후 대기
+테스트 후 레포트가 작성될 때 까지 대기
+
+ - 실행 후 진행 순서
+1. test_cases 폴더 안에 있는 test_cases.json 에 입력되어 있는 테스트 케이스 50개를 자동 테스트 진행
+
+2. 테스트 진행 후 테스트 결과는 test_results 폴더 안에 있는 test_results.csv 파일에 저장(덮어쓰기)
+
+3. reports 폴더에 test_report.md 파일명으로 레포트 자동 작성
+레포트는 run_tests.bat 실행하여 작성할 때 마다 파일명 뒤에 v1, v2, v3..... 으로 계속 생성 (수동 입력란이 있음)
+
+ 
+-----------------
+
+레포트만 작성하는 방법
+generate_report.bat 파일 실행
+
+

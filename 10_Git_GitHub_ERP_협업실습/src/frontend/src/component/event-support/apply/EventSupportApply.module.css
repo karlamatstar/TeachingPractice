@@ -1,0 +1,344 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.formContainer {
+}
+
+.formTitle {
+	display: flex;
+	justify-content: space-between;
+	background-color: #f8fafc;
+	padding: 15.5px 20px;
+}
+
+.formTitleLeft {
+	display: flex;
+	gap: 8px;
+	font-size: 14px;
+	color: #1b3a6b;
+	align-items: center;
+	font-weight: 700;
+}
+
+.formTitleRight {
+	font-size: 12px;
+	color: #9ca3af;
+	display: flex;
+	gap: 4px;
+}
+
+.formTitleRight span {
+	color: red;
+}
+
+.formItemTitle {
+	font-weight: 700;
+	color: #1b3a6b;
+	font-size: 13px;
+	position: relative;
+	padding-left: 11px;
+}
+
+.formItem {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.formItemTitle::before {
+	content: '';
+	width: 3px;
+	height: 14px;
+	background-color: #1b3a6b;
+	position: absolute;
+	left: 5px;
+	top: 50%;
+	border-radius: 8px;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.formContent {
+	padding: 20px;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+}
+
+.formItemData {
+	display: flex;
+	gap: 12px;
+}
+
+.formApplyInfoItem {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.formInputWrapper {
+	display: flex;
+	position: relative;
+}
+
+.formCalendarIcon {
+	position: absolute;
+	right: 5px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.formInput {
+	font-size: 13px;
+	color: #374151;
+	padding: 10px 0 10px 12px;
+	border-radius: 6px;
+	border: 1px solid #d1d5db;
+	line-height: 15.6px;
+	width: 150px;
+}
+
+.formInput2 {
+	font-size: 13px;
+	color: #374151;
+	padding: 10px 0 10px 12px;
+	border-radius: 6px;
+	border: 1px solid #d1d5db;
+	line-height: 15.6px;
+	width: 180px;
+}
+
+.formSelect2 {
+	padding: 10px 12px;
+	width: 140px;
+	font-size: 13px;
+	color: #374151;
+	border-radius: 6px;
+	border: 1px solid #d1d5db;
+	line-height: 15.6px;
+}
+
+.formInputLabel {
+	font-size: 13px;
+	color: #374151;
+	font-weight: 700;
+}
+
+.eventTypeList {
+	display: flex;
+	border: 1px solid #d1d5db;
+	border-radius: 8px;
+}
+
+.eventTypeItem {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	padding: 11px 18px;
+	color: #6b7280;
+	font-size: 13px;
+	line-height: 15.6px;
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+	position: relative;
+}
+
+.eventTypeItem:not(:first-child)::before {
+	position: absolute;
+	content: '';
+	width: 1px;
+	height: 100%;
+	left: 0;
+	background-color: #d1d5db;
+}
+
+.eventTypeItem.active {
+	background-color: #1b3a6b;
+	color: #fff;
+	font-size: 13px;
+}
+
+.eventDesc {
+	display: flex;
+	width: fit-content;
+	background-color: #eff6ff;
+	font-size: 13px;
+	align-items: center;
+	gap: 8px;
+	padding: 8px 14px;
+	border-radius: 6px;
+}
+
+.formUploadWrapper {
+	display: flex;
+	align-items: center;
+	background-color: #f9fafb;
+	justify-content: center;
+	border: 1px solid #d1d5db;
+	gap: 10px;
+	border-radius: 8px;
+	padding: 23px 374px;
+}
+
+.formUploadText {
+	display: flex;
+}
+
+.formUploadText {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.textTop {
+	font-size: 13px;
+	color: #6b7280;
+	text-align: center;
+}
+
+.textBottom {
+	text-align: center;
+
+	font-size: 11px;
+	color: #6b7280;
+}
+
+.formUploadedFileName {
+	font-size: 13px;
+	font-weight: 700;
+	color: #111827;
+}
+
+.formUploadedFilesWrapper {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	border: 1px solid #e5e7eb;
+	padding: 8px 12px;
+	border-radius: 8px;
+	justify-content: space-between;
+}
+
+.formUploadedInfo {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.formUploadedFileSpec {
+	font-size: 11px;
+	color: #9ca3af;
+}
+
+.formUploadSection {
+	display: flex;
+	gap: 12px;
+	flex-direction: column;
+}
+
+.formUploadCommentWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.commentTitle {
+	font-size: 13px;
+	color: #374151;
+	font-weight: 700;
+}
+
+.commentTextArea {
+	width: 100%;
+	font-size: 13px;
+	color: #9ca3af;
+	padding: 10px 12px;
+	border: 1px solid #d1d5db;
+	border-radius: 8px;
+	resize: none;
+}
+
+.uploadButtonWrapper {
+	display: flex;
+	gap: 8px;
+	padding: 18px 10px;
+	justify-content: flex-end;
+}
+
+.modalHeader {
+	padding: 20px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+.modalHeader button[data-slot='dialog-close'] {
+	background: #2d5f9e;
+	padding: 12px;
+	border-radius: 8px;
+}
+
+.closeBtn {
+	padding: 8px;
+	border-radius: 8px;
+}
+
+.modalContent {
+	padding: 16px;
+	max-height: 70vh;
+	overflow-y: scroll;
+}
+
+.footerGuide {
+	font-size: 12px;
+	color: #9ca3af;
+	display: flex;
+	align-items: center;
+	padding-left: 5px;
+}
+
+.footerContainer {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-content: center;
+	padding: 10px 20px;
+}
+
+.footerButtons {
+	display: flex;
+	gap: 8px;
+}
+
+.uploadDeleteButton {
+	display: flex;
+	color: #ef4444;
+	font-size: 12px;
+	align-items: center;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.uploadInfoWrapper {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.triggerWrapper {
+	display: flex;
+	font-size: 13px;
+	color: #9ca3af;
+	align-items: center;
+	border: 1px solid #d1d5db;
+	border-radius: 8px;
+	padding: 10px 12px;
+	gap: 50px;
+}
+.triggerDate {
+	display: flex;
+	align-items: center;
+}

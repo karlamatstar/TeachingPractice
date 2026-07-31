@@ -1,0 +1,307 @@
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+.wrap { padding: 1.5rem 1rem; font-family: var(--font-sans); }
+.report-title { font-size: 18px; font-weight: 500; color: var(--color-text-primary); text-align: center; margin-bottom: 4px; }
+.report-sub { font-size: 11px; color: var(--color-text-secondary); text-align: center; margin-bottom: 1.5rem; letter-spacing: 0.04em; }
+.sec { border: 0.5px solid var(--color-border-secondary); border-radius: var(--border-radius-lg); margin-bottom: 1rem; overflow: hidden; }
+.sec-hd { padding: 7px 14px; font-size: 12px; font-weight: 500; display: flex; align-items: center; gap: 7px; }
+.hd-blue { background: #E6F1FB; color: #0C447C; }
+.hd-teal { background: #E1F5EE; color: #085041; }
+.hd-amber { background: #FAEEDA; color: #633806; }
+.hd-purple { background: #EEEDFE; color: #3C3489; }
+.hd-coral { background: #FAECE7; color: #712B13; }
+.sec-bd { padding: 12px 14px; background: var(--color-background-primary); display: flex; flex-direction: column; gap: 10px; }
+.row { display: grid; gap: 8px; }
+.r2 { grid-template-columns: 1fr 1fr; }
+.r3 { grid-template-columns: 1fr 1fr 1fr; }
+.r13 { grid-template-columns: 1fr 3fr; }
+.field { display: flex; flex-direction: column; gap: 3px; }
+.fl { font-size: 10px; font-weight: 500; color: var(--color-text-secondary); letter-spacing: 0.04em; display: flex; align-items: center; gap: 4px; }
+.fl-en { font-weight: 400; color: var(--color-text-tertiary); }
+.fv { min-height: 28px; border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-tertiary); background: var(--color-background-secondary); padding: 0 10px; font-size: 12px; color: var(--color-text-primary); display: flex; align-items: center; }
+.fv-tall { min-height: 52px; align-items: flex-start; padding-top: 8px; }
+.fv-hint { color: var(--color-text-tertiary); font-size: 11px; font-style: italic; }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; padding: 2px 0; }
+.chip { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; border-radius: 99px; border: 0.5px solid var(--color-border-secondary); font-size: 11px; color: var(--color-text-secondary); background: var(--color-background-secondary); cursor: pointer; transition: background 0.1s; }
+.chip.on-blue { background: #E6F1FB; border-color: #85B7EB; color: #0C447C; font-weight: 500; }
+.chip.on-amber { background: #FAEEDA; border-color: #EF9F27; color: #633806; font-weight: 500; }
+.chip.on-red { background: #FCEBEB; border-color: #F09595; color: #791F1F; font-weight: 500; }
+.chip.on-green { background: #EAF3DE; border-color: #97C459; color: #27500A; font-weight: 500; }
+.chip.on-purple { background: #EEEDFE; border-color: #AFA9EC; color: #3C3489; font-weight: 500; }
+.severity-bar { display: flex; gap: 4px; align-items: center; padding: 4px 0; }
+.sv { padding: 4px 10px; border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-tertiary); font-size: 11px; color: var(--color-text-secondary); background: var(--color-background-secondary); cursor: pointer; }
+.sv.critical { background: #FCEBEB; border-color: #F09595; color: #791F1F; font-weight: 500; }
+.sv.high { background: #FAEEDA; border-color: #EF9F27; color: #633806; font-weight: 500; }
+.sv.medium { background: #E6F1FB; border-color: #85B7EB; color: #0C447C; font-weight: 500; }
+.sv.low { background: #EAF3DE; border-color: #97C459; color: #27500A; font-weight: 500; }
+.priority-bar { display: flex; gap: 4px; padding: 4px 0; }
+.pr { padding: 4px 12px; border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-tertiary); font-size: 11px; color: var(--color-text-secondary); background: var(--color-background-secondary); cursor: pointer; }
+.pr.p1 { background: #FCEBEB; border-color: #F09595; color: #791F1F; font-weight: 500; }
+.pr.p2 { background: #FAEEDA; border-color: #EF9F27; color: #633806; font-weight: 500; }
+.pr.p3 { background: #E6F1FB; border-color: #85B7EB; color: #0C447C; font-weight: 500; }
+.pr.p4 { background: #EAF3DE; border-color: #97C459; color: #27500A; font-weight: 500; }
+.divider { height: 0.5px; background: var(--color-border-tertiary); }
+.tooltip-wrap { position: relative; display: inline-flex; }
+.tooltip-wrap:hover .tip { display: block; }
+.tip { display: none; position: absolute; bottom: calc(100% + 4px); left: 0; background: #2C2C2A; color: #F1EFE8; font-size: 10px; padding: 5px 8px; border-radius: 6px; white-space: nowrap; z-index: 10; max-width: 200px; white-space: normal; line-height: 1.4; }
+</style>
+
+<div class="wrap">
+  <h2 class="report-title"><i class="ti ti-bug" aria-hidden="true" style="font-size:17px;vertical-align:-2px;margin-right:6px;"></i>결함 보고서</h2>
+  <p class="report-sub">IEEE Std. 1044 기반 · Defect Report Form</p>
+
+  <div class="sec">
+    <div class="sec-hd hd-blue">
+      <i class="ti ti-id" aria-hidden="true" style="font-size:14px;"></i>
+      기본 식별 정보
+    </div>
+    <div class="sec-bd">
+      <div class="row r3">
+        <div class="field">
+          <span class="fl">
+            <span class="tooltip-wrap">결함 ID <i class="ti ti-info-circle" style="font-size:12px;"></i><span class="tip">발견한 결함 또는 결함 보고서의 식별자</span></span>
+          </span>
+          <div class="fv"><span class="fv-hint">{{DEFECT_ID}}</span></div>
+        </div>
+        <div class="field" style="grid-column:span 2;">
+          <span class="fl">결함 제목 <span class="fl-en">(Title)</span>
+            <span class="tooltip-wrap"><i class="ti ti-info-circle" style="font-size:12px;color:var(--color-text-tertiary);"></i><span class="tip">발견한 결함의 내용을 파악할 수 있는 함축적인 한 문장</span></span>
+          </span>
+          <div class="fv">{{TITLE}}</div>
+        </div>
+      </div>
+      <div class="row r3">
+        <div class="field">
+          <span class="fl">자산 <span class="fl-en">(Asset)</span>
+            <span class="tooltip-wrap"><i class="ti ti-info-circle" style="font-size:12px;color:var(--color-text-tertiary);"></i><span class="tip">결함을 내포하는 소프트웨어 자산 (product, component, module 등)</span></span>
+          </span>
+          <div class="fv"><span class="fv-hint">{{ASSET}}</span></div>
+        </div>
+        <div class="field">
+          <span class="fl">결함발견 버전 <span class="fl-en">(Detected)</span></span>
+          <div class="fv"><span class="fv-hint">{{DETECTED}}</span></div>
+        </div>
+        <div class="field">
+          <span class="fl">조치완료 버전 <span class="fl-en">(Corrected)</span></span>
+          <div class="fv"><span class="fv-hint">{{CORRECTED}}</span></div>
+        </div>
+      </div>
+      <div class="row r2">
+        <div class="field">
+          <span class="fl">개발 산출물 <span class="fl-en">(Artifact)</span>
+            <span class="tooltip-wrap"><i class="ti ti-info-circle" style="font-size:12px;color:var(--color-text-tertiary);"></i><span class="tip">결함을 내포하는 개발 산출물 문서</span></span>
+          </span>
+          <div class="fv"><span class="fv-hint">{{ARTIFACT}}</span></div>
+        </div>
+        <div class="field">
+          <span class="fl">상태 <span class="fl-en">(Status)</span>
+            <span class="tooltip-wrap"><i class="ti ti-info-circle" style="font-size:12px;color:var(--color-text-tertiary);"></i><span class="tip">결함의 생명주기에 따른 현재 상태</span></span>
+          </span>
+          <div class="chips">
+            <span class="chip on-blue">신규</span>
+            <span class="chip">할당</span>
+            <span class="chip">수정중</span>
+            <span class="chip">검증</span>
+            <span class="chip">종료</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-hd hd-amber">
+      <i class="ti ti-alert-triangle" aria-hidden="true" style="font-size:14px;"></i>
+      분류 및 영향도
+    </div>
+    <div class="sec-bd">
+      <div class="row r2">
+        <div class="field">
+          <span class="fl">우선순위 <span class="fl-en">(Priority)</span>
+            <span class="tooltip-wrap"><i class="ti ti-info-circle" style="font-size:12px;color:var(--color-text-tertiary);"></i><span class="tip">결함 조치(평가·수정·확인 테스트 등)에 대한 우선순위 랭킹</span></span>
+          </span>
+          <div class="priority-bar">
+            <span class="pr p1">P1 긴급</span>
+            <span class="pr p2">P2 높음</span>
+            <span class="pr p3">P3 보통</span>
+            <span class="pr p4">P4 낮음</span>
+          </div>
+        </div>
+        <div class="field">
+          <span class="fl">심각도 <span class="fl-en">(Severity)</span>
+            <span class="tooltip-wrap"><i class="ti ti-info-circle" style="font-size:12px;color:var(--color-text-tertiary);"></i><span class="tip">해당 결함이 일으키는 장애의 영향도 정도</span></span>
+          </span>
+          <div class="severity-bar">
+            <span class="sv critical">Critical</span>
+            <span class="sv high">High</span>
+            <span class="sv medium">Medium</span>
+            <span class="sv low">Low</span>
+          </div>
+        </div>
+      </div>
+      <div class="row r2">
+        <div class="field">
+          <span class="fl">발생 가능성 <span class="fl-en">(Probability)</span>
+            <span class="tooltip-wrap"><i class="ti ti-info-circle" style="font-size:12px;color:var(--color-text-tertiary);"></i><span class="tip">해당 결함으로 말미암은 장애 발생 가능성의 정도</span></span>
+          </span>
+          <div class="chips">
+            <span class="chip">매우 낮음</span>
+            <span class="chip">낮음</span>
+            <span class="chip on-amber">보통</span>
+            <span class="chip">높음</span>
+            <span class="chip">매우 높음</span>
+          </div>
+        </div>
+        <div class="field">
+          <span class="fl">결과(영향) <span class="fl-en">(Effect)</span>
+            <span class="tooltip-wrap"><i class="ti ti-info-circle" style="font-size:12px;color:var(--color-text-tertiary);"></i><span class="tip">해당 결함으로 말미암아 발생할 잠재 장애 유형(요구사항 품질 특성별) 식별</span></span>
+          </span>
+          <div class="chips">
+            <span class="chip">기능성</span>
+            <span class="chip">신뢰성</span>
+            <span class="chip on-red">보안성</span>
+            <span class="chip">성능</span>
+            <span class="chip">사용성</span>
+          </div>
+        </div>
+      </div>
+      <div class="row r2">
+        <div class="field">
+          <span class="fl">유형 <span class="fl-en">(Type)</span>
+            <span class="tooltip-wrap"><i class="ti ti-info-circle" style="font-size:12px;color:var(--color-text-tertiary);"></i><span class="tip">발견된 결함의 코드나 산출물에 근거한 결함의 분류체계</span></span>
+          </span>
+          <div class="chips">
+            <span class="chip on-purple">로직 오류</span>
+            <span class="chip">데이터</span>
+            <span class="chip">인터페이스</span>
+            <span class="chip">환경</span>
+            <span class="chip">기타</span>
+          </div>
+        </div>
+        <div class="field">
+          <span class="fl">원인 <span class="fl-en">(Mode)</span>
+            <span class="tooltip-wrap"><i class="ti ti-info-circle" style="font-size:12px;color:var(--color-text-tertiary);"></i><span class="tip">잘못된 구현·표현, 불필요한 항목 추가, 누락 등 분류 (Wrong / Missing / Extra)</span></span>
+          </span>
+          <div class="chips">
+            <span class="chip on-amber">Wrong</span>
+            <span class="chip">Missing</span>
+            <span class="chip">Extra</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-hd hd-teal">
+      <i class="ti ti-file-description" aria-hidden="true" style="font-size:14px;"></i>
+      결함 상세 내용
+    </div>
+    <div class="sec-bd">
+      <div class="field">
+        <span class="fl">내용 <span class="fl-en">(Description)</span>
+          <span class="tooltip-wrap"><i class="ti ti-info-circle" style="font-size:12px;color:var(--color-text-tertiary);"></i><span class="tip">누락된 것, 잘못된 것 또는 불필요한 것이 무엇인가에 대한 상세 설명</span></span>
+        </span>
+        <div class="fv fv-tall">{{DESCRIPTION}}</div>
+      </div>
+      <div class="row r2">
+        <div class="field">
+          <span class="fl">주입 활동 <span class="fl-en">(Inserted Activity)</span>
+            <span class="tooltip-wrap"><i class="ti ti-info-circle" style="font-size:12px;color:var(--color-text-tertiary);"></i><span class="tip">결함이 유입된 단계 (요구사항·설계·코딩·컨피규레이션·문서화)</span></span>
+          </span>
+          <div class="chips">
+            <span class="chip">요구사항</span>
+            <span class="chip on-teal">설계</span>
+            <span class="chip">코딩</span>
+            <span class="chip">컨피규레이션</span>
+            <span class="chip">문서화</span>
+          </div>
+        </div>
+        <div class="field">
+          <span class="fl">발견 활동 <span class="fl-en">(Detected Activity)</span>
+            <span class="tooltip-wrap"><i class="ti ti-info-circle" style="font-size:12px;color:var(--color-text-tertiary);"></i><span class="tip">결함을 발견한 활동 (요구사항·설계·코드 리뷰, 공급자·고객 테스트, 제품화 단계 등)</span></span>
+          </span>
+          <div class="chips">
+            <span class="chip">요구사항 리뷰</span>
+            <span class="chip on-teal">코드 리뷰</span>
+            <span class="chip">단위 테스트</span>
+            <span class="chip">시스템 테스트</span>
+            <span class="chip">고객 테스트</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-hd hd-coral">
+      <i class="ti ti-link" aria-hidden="true" style="font-size:14px;"></i>
+      참조 및 처분
+    </div>
+    <div class="sec-bd">
+      <div class="row r2">
+        <div class="field">
+          <span class="fl">장애 참조 <span class="fl-en">(Failure References)</span>
+            <span class="tooltip-wrap"><i class="ti ti-info-circle" style="font-size:12px;color:var(--color-text-tertiary);"></i><span class="tip">해당 결함으로 발생할 장애 식별자</span></span>
+          </span>
+          <div class="fv"><span class="fv-hint">{{FAILURE_REFERENCE}}</span></div>
+        </div>
+        <div class="field">
+          <span class="fl">변경 참조 <span class="fl-en">(Change References)</span>
+            <span class="tooltip-wrap"><i class="ti ti-info-circle" style="font-size:12px;color:var(--color-text-tertiary);"></i><span class="tip">결함 조치를 위한 변경관리 식별자</span></span>
+          </span>
+          <div class="fv"><span class="fv-hint">{{CHANGE_REFERENCE}}</span></div>
+        </div>
+      </div>
+      <div class="field">
+        <span class="fl">처분 <span class="fl-en">(Disposition)</span>
+          <span class="tooltip-wrap"><i class="ti ti-info-circle" style="font-size:12px;color:var(--color-text-tertiary);"></i><span class="tip">결함 종료에 따른 결함 보고서의 최종 처분 결과</span></span>
+        </span>
+        <div class="chips">
+          <span class="chip on-green">Corrected</span>
+          <span class="chip">Not Found</span>
+          <span class="chip">Referred</span>
+          <span class="chip">Duplicate</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-hd hd-purple">
+      <i class="ti ti-users" aria-hidden="true" style="font-size:14px;"></i>
+      담당자 및 이력
+    </div>
+    <div class="sec-bd">
+      <div class="row r3">
+        <div class="field">
+          <span class="fl"><i class="ti ti-user" style="font-size:12px;"></i> 보고자</span>
+          <div class="fv">{{REPORTER}}</div>
+        </div>
+        <div class="field">
+          <span class="fl"><i class="ti ti-calendar" style="font-size:12px;"></i> 발견 일자</span>
+          <div class="fv">{{DISCOVERY_DATE}}</div>
+        </div>
+        <div class="field">
+          <span class="fl"><i class="ti ti-user-check" style="font-size:12px;"></i> 담당자</span>
+          <div class="fv">{{ASSIGNEE}}</div>
+        </div>
+      </div>
+      <div class="row r3">
+        <div class="field">
+          <span class="fl"><i class="ti ti-tool" style="font-size:12px;"></i> 해결자</span>
+          <div class="fv">{{RESOLVER}}</div>
+        </div>
+        <div class="field">
+          <span class="fl"><i class="ti ti-calendar-check" style="font-size:12px;"></i> 해결 일자</span>
+          <div class="fv">{{RESOLUTION_DATE}}</div>
+        </div>
+        <div class="field">
+          <span class="fl"><i class="ti ti-shield-check" style="font-size:12px;"></i> 검증자 / 검증 일자</span>
+          <div class="fv">{{VERIFIER}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

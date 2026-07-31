@@ -1,0 +1,49 @@
+Issue ID,Summary,Issue Type,Priority,Description,Epic Link
+T-001,프로젝트 폴더 구조 생성,Task,Medium,"ai_quality_final_project/ 하위 data/ reports/ dashboard/ 폴더 생성",AJ-15
+T-002,requirements.txt 작성,Task,Medium,"openai / python-dotenv / pandas / streamlit 의존성 명세",AJ-15
+T-003,.env 파일 설정 및 API Key 연결,Task,High,최상위 d:\2_qaeduc\.env 참조하도록 config.py에서 경로 설정,AJ-15
+T-004,config.py 작성,Task,High,BASE_DIR / DATA_DIR / REPORTS_DIR 경로 및 모델명 중앙 관리,AJ-15
+T-005,가상환경 구성 및 패키지 설치 확인,Task,Medium,pip install -r requirements.txt 실행 후 임포트 정상 확인,AJ-15
+T-006,교육과정 기준 정보 수집 및 정리,Task,High,"총 교육시간, 출결 규정, 수료 기준, 취업지원, 안내 범위 항목 정리",AJ-16
+T-007,knowledge_base.py 작성,Task,High,get_knowledge() 함수로 기준 정보 문자열 반환 구현,AJ-16
+T-008,기준 정보 항목 검토 및 보완,Task,Medium,누락된 안내 항목 없는지 검토 후 추가,AJ-16
+T-009,knowledge_base 단독 동작 테스트,Task,Low,python -c 로 get_knowledge() 출력 확인,AJ-16
+T-010,테스트 유형 정의,Task,Medium,Happy / Edge / Negative 각 유형 기준 정의,AJ-17
+T-011,Happy 케이스 4개 작성,Task,High,"TC-001 교육시간, TC-002 출결, TC-003 수료, TC-004 취업지원",AJ-17
+T-012,Edge 케이스 2개 작성,Task,High,"TC-005 문서 외 질문, TC-007 복합 질문",AJ-17
+T-013,Negative 케이스 1개 작성,Task,High,TC-006 위험 요청 거절 확인,AJ-17
+T-014,test_cases.json 스키마 확정 및 저장,Task,Medium,"case_id / category / test_type / user_question / expected_keyword / expected_policy 필드 확정",AJ-17
+T-015,OpenAI API 연결 및 인증 확인,Task,High,API Key 로딩 후 단순 호출 테스트,AJ-18
+T-016,시스템 프롬프트 설계,Task,High,knowledge_base 내용을 시스템 프롬프트에 주입하는 구조 설계,AJ-18
+T-017,get_answer() 함수 구현,Task,High,사용자 질문 입력 → OpenAI API 호출 → 답변 반환,AJ-18
+T-018,정상 질문 응답 테스트,Task,Medium,Happy 케이스 질문으로 단독 실행 후 응답 확인,AJ-18
+T-019,범위 외 질문 거절 동작 확인,Task,Medium,날씨 등 교육과정 외 질문 시 안내 문구 반환 확인,AJ-18
+T-020,위험 요청 거절 동작 확인,Task,High,TC-006 질문으로 안전 거절 문구 반환 확인,AJ-18
+T-021,validate() 함수 구현,Task,Medium,expected_keyword 포함 여부 True/False 판정,AJ-19
+T-022,PASS/FAIL 판정 및 reason 반환 구현,Task,Medium,"keyword_found / rule_status / rule_reason 딕셔너리 반환",AJ-19
+T-023,규칙 검증 단독 유닛 테스트,Task,Low,다양한 입력값으로 PASS/FAIL 결과 확인,AJ-19
+T-024,평가 항목 4개 정의,Task,Medium,"accuracy / groundedness / helpfulness / safety 배점 기준 정의",AJ-20
+T-025,Judge 시스템 프롬프트 작성,Task,High,채점 기준과 JSON 응답 형식 지정,AJ-20
+T-026,evaluate() 함수 구현,Task,High,사용자 질문 + 챗봇 답변 → OpenAI API → JSON 채점 결과 반환,AJ-20
+T-027,response_format json_object 적용,Task,Medium,Structured Output 방식으로 JSON 파싱 안정성 확보,AJ-20
+T-028,PASS/REVIEW/FAIL 판정 로직 확인,Task,Medium,평균 점수 기준 판정 결과 샘플 검토,AJ-20
+T-029,save_json() 구현,Task,Medium,전체 평가 결과 JSON 저장,AJ-21
+T-030,save_csv() 구현,Task,Medium,"utf-8-sig 인코딩 적용, 엑셀 호환 확인",AJ-21
+T-031,save_markdown() 구현,Task,Medium,"요약 테이블 + 케이스별 상세 내용 포함 Markdown 작성",AJ-21
+T-032,generate_all() 통합 함수 작성,Task,Medium,3종 파일 한 번에 생성하는 함수 구현,AJ-21
+T-033,reports/ 폴더 자동 생성 확인,Task,Low,config.py에서 REPORTS_DIR.mkdir 동작 확인,AJ-21
+T-034,출력 파일 내용 검토,Task,Low,"JSON / CSV / Markdown 파일 열어 데이터 정합성 확인",AJ-21
+T-035,main.py 전체 흐름 설계,Task,High,service → rule → judge → report 순서 연결 구조 설계,AJ-22
+T-036,test_cases.json 로딩 로직 구현,Task,Medium,json.load()로 케이스 목록 불러오기,AJ-22
+T-037,케이스 순회 및 모듈 호출 연결,Task,High,각 케이스마다 get_answer / validate / evaluate 순서 호출,AJ-22
+T-038,실행 로그 출력 구현,Task,Low,케이스별 진행 상황 콘솔 출력,AJ-22
+T-039,전체 파이프라인 End-to-End 실행 테스트,Task,High,python main.py 실행 후 7개 케이스 전체 정상 완료 확인,AJ-22
+T-040,7개 케이스 결과 검토,Task,Medium,PASS/FAIL 판정 결과 적정성 확인,AJ-22
+T-041,Streamlit 앱 기본 구성,Task,Medium,페이지 타이틀 및 레이아웃 설정,AJ-23
+T-042,요약 지표 카드 구현,Task,Medium,"총 케이스 / PASS / REVIEW / FAIL 수치 metric 표시",AJ-23
+T-043,케이스별 점수 표 구현,Task,High,PASS/REVIEW/FAIL 컬러 하이라이트 적용 DataFrame 표시,AJ-23
+T-044,항목별 평균 점수 바차트 구현,Task,Medium,"accuracy / groundedness / helpfulness / safety 평균 bar_chart",AJ-23
+T-045,케이스 상세 보기 구현,Task,Medium,selectbox로 케이스 선택 후 질문·답변·채점 상세 표시,AJ-23
+T-046,대시보드 최종 동작 확인,Task,Low,main.py 실행 후 streamlit run 정상 렌더링 확인,AJ-23
+T-047,[BUG] judge_agent JSON 파싱 실패 시 파이프라인 중단,Bug,High,"재현: main.py 실행 중 API 응답 불완전 시 JSONDecodeError 발생 후 중단 | 기대: 오류 로그 후 다음 케이스 진행 | 관련 파일: judge_agent.py",AJ-24
+T-048,[REQ] 평가 결과 누적 저장 기능 요청,Story,Medium,"요청 배경: 매 실행마다 덮어써져 이전 결과 비교 불가 | 기대 효과: 실행 일시별 결과 이력 관리 가능 | 관련 파일: report_generator.py",AJ-25

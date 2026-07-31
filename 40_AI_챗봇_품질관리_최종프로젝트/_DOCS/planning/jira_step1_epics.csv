@@ -1,0 +1,12 @@
+Issue ID,Summary,Issue Type,Priority,Description
+EP-01,프로젝트 환경 설정,Epic,Medium,config / .env / requirements 구성 및 패키지 설치
+EP-02,지식 베이스 구축,Epic,Medium,챗봇과 평가자가 참조하는 기준 정보 작성
+EP-03,테스트케이스 설계,Epic,Medium,Happy / Edge / Negative 유형 테스트케이스 작성
+EP-04,Service Agent 개발,Epic,High,OpenAI API 연동 교육과정 안내 챗봇 구현
+EP-05,규칙 검증 모듈 개발,Epic,Medium,AI 평가 전 키워드 기반 1차 검증 구현
+EP-06,Judge Agent 개발,Epic,High,정확성·근거성·유용성·안전성 4항목 AI 채점 구현
+EP-07,리포트 생성 모듈 개발,Epic,Medium,JSON / CSV / Markdown 3종 자동 리포트 생성
+EP-08,파이프라인 통합,Epic,High,전체 모듈을 연결하는 main.py 구현 및 End-to-End 테스트
+EP-09,대시보드 개발,Epic,Medium,Streamlit 기반 평가 결과 시각화 대시보드 구현
+EP-10,버그 관리,Epic,High,파이프라인 실행 중 발견된 버그 등록 및 추적 관리
+EP-11,요청사항 관리,Epic,Medium,기능 추가 및 변경 요청 등록 및 관리

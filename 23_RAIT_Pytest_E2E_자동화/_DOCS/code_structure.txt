@@ -1,0 +1,20 @@
+ai-agent-rait-test/
+│
+├── .env                    # OpenAI API Key, Base URL 등 환경변수 관리 파일
+├── requirements.txt        # 실습에 필요한 Python 패키지 목록
+│
+├── app/                    # 1. 테스트 대상 (가상 AI 에이전트 서비스)
+│   ├── __init__.py
+│   ├── main.py             # FastAPI 기반 에이전트 서버 엔진
+│   └── core_agent.py       # LLM 프롬프트 및 에이전트 체인 로직
+│
+├── tests/                  # 2. RaiT 테스트 프로세스 수행 폴더
+│   ├── __init__.py
+│   ├── conftest.py         # PyTest 공통 Fixture (로그 설정, 서버 구동 등)
+│   │
+│   ├── test_api_judge.py   # [단계 2~3] API 자동화 + LLM 저지 품질 테스트
+│   └── test_e2e_ui.py      # [단계 3] Playwright 활용 웹 UI 인터랙션 & 캡처
+│
+└── outputs/                # 3. 테스트 결과 및 결함 보고서 저장 폴더
+    ├── rait_quality.log    # RaiT 점수 및 저지 평가 결과 로그
+    └── evidence_screen.png # E2E 테스트 성공/실패 화면 증적 캡처

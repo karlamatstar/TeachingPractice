@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Freelance Marketer Portfolio</title>
+    <meta name="description" content="프리랜서 마케터 포트폴리오 웹사이트" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container">
+        <a class="brand" href="#home">Marketer</a>
+        <button class="nav-toggle" type="button" aria-label="메뉴 열기">☰</button>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero section container">
+        <div>
+          <p class="eyebrow">Data-driven growth marketer</p>
+          <h1>데이터로 증명하는 마케터, OOO입니다.</h1>
+          <p class="lead">퍼포먼스 광고, SEO, 콘텐츠 기획까지 한 번에 설계해 성과를 끌어올리는 포트폴리오 사이트입니다.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">전체 프로젝트 보기</a>
+            <button class="button button-secondary" id="downloadDemoBtn" type="button">이력서 다운로드</button>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="성과 요약">
+          <div class="metric-card">
+            <strong class="metric-value" data-target="300">0</strong>
+            <span>ROAS 달성</span>
+          </div>
+          <div class="metric-card">
+            <strong class="metric-value" data-target="50">0</strong>
+            <span>전환율 개선</span>
+          </div>
+          <div class="metric-card">
+            <strong class="metric-value" data-target="12">0</strong>
+            <span>개월의 성장 운영</span>
+          </div>
+        </aside>
+      </section>
+
+      <section id="about" class="section container">
+        <div class="section-heading">
+          <p class="eyebrow">About Me</p>
+          <h2>마케터로서의 철학과 핵심 역량</h2>
+        </div>
+        <div class="about-grid">
+          <article class="panel">
+            <h3>핵심 스킬 스택</h3>
+            <ul class="skill-list">
+              <li><span>Performance Marketing</span><i style="--w: 92%"></i></li>
+              <li><span>SEO</span><i style="--w: 86%"></i></li>
+              <li><span>Content Planning</span><i style="--w: 83%"></i></li>
+              <li><span>CRM / Lifecycle</span><i style="--w: 78%"></i></li>
+            </ul>
+          </article>
+          <article class="panel">
+            <h3>타임라인 연혁</h3>
+            <div class="timeline">
+              <article class="timeline-item"><strong>2024</strong><p>광고 집행과 콘텐츠 운영을 기반으로 프리랜서 전환 준비</p></article>
+              <article class="timeline-item"><strong>2023</strong><p>유입 확대 캠페인 운영으로 ROAS 300% 달성</p></article>
+              <article class="timeline-item"><strong>2022</strong><p>SEO와 CRM 전환 설계로 리드 품질 개선</p></article>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="section container">
+        <div class="section-heading">
+          <p class="eyebrow">Projects</p>
+          <h2>대표 프로젝트 사례</h2>
+          <div class="filter-group" role="tablist" aria-label="프로젝트 카테고리">
+            <button class="filter-chip active" data-filter="all" type="button">전체</button>
+            <button class="filter-chip" data-filter="performance" type="button">퍼포먼스</button>
+            <button class="filter-chip" data-filter="content" type="button">콘텐츠</button>
+            <button class="filter-chip" data-filter="crm" type="button">CRM</button>
+          </div>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card" data-category="performance">
+            <h3>광고 성과 개선 캠페인</h3>
+            <p>ROAS 300% 달성, CPA 18% 절감</p>
+            <button class="text-link" data-modal="project-1" type="button">상세 보기</button>
+          </article>
+          <article class="project-card" data-category="content">
+            <h3>브랜드 콘텐츠 리뉴얼</h3>
+            <p>블로그/릴리즈 콘텐츠 운영으로 체류 시간 40% 증가</p>
+            <button class="text-link" data-modal="project-2" type="button">상세 보기</button>
+          </article>
+          <article class="project-card" data-category="crm">
+            <h3>CRM 리드 리타겟팅</h3>
+            <p>이메일·푸시 흐름 재설계로 전환율 50% 개선</p>
+            <button class="text-link" data-modal="project-3" type="button">상세 보기</button>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section container">
+        <div class="section-heading">
+          <p class="eyebrow">Contact</p>
+          <h2>문의 및 포트폴리오 다운로드</h2>
+        </div>
+        <div class="contact-grid">
+          <form id="contactForm" class="panel form-panel" novalidate>
+            <label>이름<input type="text" name="name" required /></label>
+            <label>이메일<input type="email" name="email" required /></label>
+            <label>제목<input type="text" name="title" required /></label>
+            <label>문의 내용<textarea name="message" required></textarea></label>
+            <button class="button button-primary" type="submit">전송</button>
+            <p id="formStatus" class="form-status" aria-live="polite"></p>
+          </form>
+          <aside class="panel">
+            <h3>링크 & 다운로드</h3>
+            <p>LinkedIn과 포트폴리오 PDF를 바로 확인할 수 있습니다.</p>
+            <div class="link-list">
+              <a class="link-card" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn 보기</a>
+              <a class="link-card" href="assets/portfolio-overview.pdf" download>포트폴리오 PDF 다운로드</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer container">© 2026 Freelance Marketer Portfolio</footer>
+
+    <div id="projectModal" class="modal" aria-hidden="true">
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal-close" id="modalClose" type="button" aria-label="닫기">×</button>
+        <h3 id="modalTitle"></h3>
+        <p id="modalBody"></p>
+      </div>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

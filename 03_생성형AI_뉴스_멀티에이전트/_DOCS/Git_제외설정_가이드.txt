@@ -1,0 +1,82 @@
+=====================================
+.gitignore에 넣을 항목
+=====================================
+
+# 가상환경 (절대 올리면 안 됨)
+.venv/
+venv/
+
+# API 키 (절대 올리면 안 됨 - 보안)
+.env
+
+# Python 캐시
+__pycache__/
+*.pyc
+*.pyo
+
+# 출력 결과물 (생성되는 파일이라 불필요)
+_OUTPUT/
+
+# VS Code 설정 (개인 설정이라 팀원과 공유 불필요)
+.vscode/
+
+# OS 자동 생성 파일
+Thumbs.db        # Windows
+
+
+
+======================================
+프로젝트 복사 후 다른 VS Code에서 사용하는 절차
+======================================
+
+1단계: 파일 복사
+.venv 폴더는 제외하고 나머지만 복사하세요
+
+
+2단계:  VS Code에서 폴더 열기
+-파일 → 폴더 열기 → 복사한 폴더 선택
+
+3단계: 가상환경 새로 생성
+터미널에서 실행:    .venv\Scripts\activate
+
+4단계: 패키지 설치
+pip install langchain langchain-openai langgraph python-dotenv
+
+
+5단계: .env 파일 확인
+.env 파일 확인(새로만들기)
+.env 파일 안의 API 키가 올바른지 확인:  OPENAI_API_KEY=sk-xxxxxxxx
+
+6단계: 실행 테스트  : python src/main.py
+
+핵심 요약은  .venv만 빼고 복사 → 새 가상환경 생성 → 패키지 재설치 → 실행
+
+
+=======================================
+
+=======================================
+1. 가상환경 먼저 생성
+python -m venv .venv
+
+2. 가상환경 활성화
+.venv\Scripts\activate
+
+터미널 앞에 (.venv) 표시가 나오면 성공
+
+3. 그 다음 pip install
+pip install langchain langchain-openai langgraph python-dotenv
+
+
+*** 생성 → 활성화 → pip install 이 순서를 꼭 지키세요!
+
+
+
+
+
+
+
+
+
+
+
+
